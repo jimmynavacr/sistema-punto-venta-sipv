@@ -87,6 +87,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogos\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\IU_ESTADO_ACTIVO.cs">
       <SubType>Form</SubType>
     </Compile>
