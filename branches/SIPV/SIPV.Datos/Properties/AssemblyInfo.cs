@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Instituto Costarricence de Puertos del Pacífico")]
 [assembly: AssemblyProduct("SIPV.Datos")]
-[assembly: AssemblyCopyright("Copyright © Instituto Costarricence de Puertos del Pacífico 2010")]
+[assembly: AssemblyCopyright("Copyright © ULACIT 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

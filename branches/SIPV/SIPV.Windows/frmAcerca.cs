@@ -37,9 +37,8 @@ namespace SIPV.Windows
             this.labelCompanyName.Text = AssemblyCompany;
             this.textBoxDescription.Text = AssemblyDescription + "\r\n" +
                  " Desarrollado por \r\n" +
-                 " Dpl. Jimmy Navarro Castro \r\n" +
-                 " Analista Programador \r\n" +
-                 " Marzo, 2011 \r\n";
+                 " Jimmy Navarro Castro \r\n" +
+                 " Marzo, 2012 \r\n";
             
             this.labelProductName.Visible = true;
             this.labelVersion.Visible = true;

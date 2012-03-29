@@ -34,9 +34,6 @@ namespace SIPV.Security
 
 
         private static int HTCAPTION = 2;
-        private TabControl tabControl1;
-        private TabPage tabPage1;
-        private TabPage tabPage2;
         private static int WM_NCLBUTTONDOWN = 0xA1;
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private extern static int SendMessage(System.IntPtr hWnd, int wMsg,
@@ -84,10 +81,6 @@ namespace SIPV.Security
             this.simpleButton1 = new System.Windows.Forms.Button();
             this.TbUsuario = new System.Windows.Forms.TextBox();
             this.TbClave = new System.Windows.Forms.TextBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -96,7 +89,7 @@ namespace SIPV.Security
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(297, 139);
+            this.label1.Location = new System.Drawing.Point(43, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(84, 13);
             this.label1.TabIndex = 7;
@@ -109,7 +102,7 @@ namespace SIPV.Security
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label2.Location = new System.Drawing.Point(297, 175);
+            this.label2.Location = new System.Drawing.Point(43, 68);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 9;
@@ -134,7 +127,7 @@ namespace SIPV.Security
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(206, 278);
+            this.label4.Location = new System.Drawing.Point(105, 148);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 19);
             this.label4.TabIndex = 15;
@@ -142,7 +135,7 @@ namespace SIPV.Security
             // 
             // CmdIngresar
             // 
-            this.CmdIngresar.Location = new System.Drawing.Point(300, 244);
+            this.CmdIngresar.Location = new System.Drawing.Point(46, 107);
             this.CmdIngresar.Name = "CmdIngresar";
             this.CmdIngresar.Size = new System.Drawing.Size(116, 28);
             this.CmdIngresar.TabIndex = 2;
@@ -151,7 +144,7 @@ namespace SIPV.Security
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(422, 244);
+            this.simpleButton1.Location = new System.Drawing.Point(168, 107);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(116, 28);
             this.simpleButton1.TabIndex = 3;
@@ -160,7 +153,7 @@ namespace SIPV.Security
             // 
             // TbUsuario
             // 
-            this.TbUsuario.Location = new System.Drawing.Point(422, 135);
+            this.TbUsuario.Location = new System.Drawing.Point(168, 28);
             this.TbUsuario.Name = "TbUsuario";
             this.TbUsuario.Size = new System.Drawing.Size(116, 20);
             this.TbUsuario.TabIndex = 0;
@@ -168,50 +161,19 @@ namespace SIPV.Security
             // 
             // TbClave
             // 
-            this.TbClave.Location = new System.Drawing.Point(422, 171);
+            this.TbClave.Location = new System.Drawing.Point(168, 64);
             this.TbClave.Name = "TbClave";
             this.TbClave.Size = new System.Drawing.Size(116, 20);
             this.TbClave.TabIndex = 1;
             this.TbClave.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbClaveKeyDownEvent);
             // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(77, 135);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(215, 99);
-            this.tabControl1.TabIndex = 16;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(207, 73);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(207, 73);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // frmLogeo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
-            this.ClientSize = new System.Drawing.Size(578, 295);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(304, 177);
             this.ControlBox = false;
-            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.TbClave);
             this.Controls.Add(this.TbUsuario);
             this.Controls.Add(this.simpleButton1);
@@ -227,7 +189,6 @@ namespace SIPV.Security
             this.Text = "Sistema de Gestión Tecnológica y Administrativa ";
             this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmLogeo_MouseDown);
-            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

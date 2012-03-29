@@ -30,13 +30,13 @@ namespace SIPV.Main
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mnuSIPV));
-            BaseCode.OutlookBarButton outlookBarButton15 = new BaseCode.OutlookBarButton();
-            BaseCode.OutlookBarButton outlookBarButton16 = new BaseCode.OutlookBarButton();
-            BaseCode.OutlookBarButton outlookBarButton17 = new BaseCode.OutlookBarButton();
-            BaseCode.OutlookBarButton outlookBarButton18 = new BaseCode.OutlookBarButton();
-            BaseCode.OutlookBarButton outlookBarButton19 = new BaseCode.OutlookBarButton();
-            BaseCode.OutlookBarButton outlookBarButton20 = new BaseCode.OutlookBarButton();
-            BaseCode.OutlookBarButton outlookBarButton21 = new BaseCode.OutlookBarButton();
+            BaseCode.OutlookBarButton outlookBarButton1 = new BaseCode.OutlookBarButton();
+            BaseCode.OutlookBarButton outlookBarButton2 = new BaseCode.OutlookBarButton();
+            BaseCode.OutlookBarButton outlookBarButton3 = new BaseCode.OutlookBarButton();
+            BaseCode.OutlookBarButton outlookBarButton4 = new BaseCode.OutlookBarButton();
+            BaseCode.OutlookBarButton outlookBarButton5 = new BaseCode.OutlookBarButton();
+            BaseCode.OutlookBarButton outlookBarButton6 = new BaseCode.OutlookBarButton();
+            BaseCode.OutlookBarButton outlookBarButton7 = new BaseCode.OutlookBarButton();
             this.mnuPrincipal_ = new System.Windows.Forms.MenuStrip();
             this.mnuMantenimientos = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPrivilegios = new System.Windows.Forms.ToolStripMenuItem();
@@ -97,9 +97,9 @@ namespace SIPV.Main
             this.mnuProcesos,
             this.mnuUtilitarios,
             this.mnuAyuda});
-            this.mnuPrincipal_.Location = new System.Drawing.Point(0, 0);
+            this.mnuPrincipal_.Location = new System.Drawing.Point(209, 0);
             this.mnuPrincipal_.Name = "mnuPrincipal_";
-            this.mnuPrincipal_.Size = new System.Drawing.Size(842, 24);
+            this.mnuPrincipal_.Size = new System.Drawing.Size(432, 24);
             this.mnuPrincipal_.TabIndex = 1;
             this.mnuPrincipal_.Text = "menuStrip1";
             // 
@@ -117,7 +117,7 @@ namespace SIPV.Main
             // mnuPrivilegios
             // 
             this.mnuPrivilegios.Name = "mnuPrivilegios";
-            this.mnuPrivilegios.Size = new System.Drawing.Size(212, 22);
+            this.mnuPrivilegios.Size = new System.Drawing.Size(140, 22);
             this.mnuPrivilegios.Tag = "A";
             this.mnuPrivilegios.Text = "Privilegios";
             this.mnuPrivilegios.Click += new System.EventHandler(this.mnuPrivilegios_Click);
@@ -125,26 +125,26 @@ namespace SIPV.Main
             // toolStripMenuItem7
             // 
             this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(209, 6);
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(137, 6);
             // 
             // mnuMInventarios
             // 
             this.mnuMInventarios.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuIU_ESTADO_ACTIVO});
             this.mnuMInventarios.Name = "mnuMInventarios";
-            this.mnuMInventarios.Size = new System.Drawing.Size(152, 22);
+            this.mnuMInventarios.Size = new System.Drawing.Size(140, 22);
             this.mnuMInventarios.Text = "Inventarios";
             // 
             // mnuIU_ESTADO_ACTIVO
             // 
             this.mnuIU_ESTADO_ACTIVO.Name = "mnuIU_ESTADO_ACTIVO";
-            this.mnuIU_ESTADO_ACTIVO.Size = new System.Drawing.Size(206, 22);
+            this.mnuIU_ESTADO_ACTIVO.Size = new System.Drawing.Size(150, 22);
             this.mnuIU_ESTADO_ACTIVO.Text = "Estado activo";
             // 
             // toolStripMenuItem9
             // 
             this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Size = new System.Drawing.Size(209, 6);
+            this.toolStripMenuItem9.Size = new System.Drawing.Size(137, 6);
             // 
             // mnuTransacciones
             // 
@@ -158,13 +158,13 @@ namespace SIPV.Main
             // mnuTInventarios
             // 
             this.mnuTInventarios.Name = "mnuTInventarios";
-            this.mnuTInventarios.Size = new System.Drawing.Size(152, 22);
+            this.mnuTInventarios.Size = new System.Drawing.Size(140, 22);
             this.mnuTInventarios.Text = "Inventarios";
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(196, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(137, 6);
             // 
             // mnuReportes
             // 
@@ -182,7 +182,7 @@ namespace SIPV.Main
             this.mnuIU_REPORTE_USUARIOS_GRUPO,
             this.mnuIU_REPORTE_PERMISOS_GRUPO});
             this.mnuRSeguridad.Name = "mnuRSeguridad";
-            this.mnuRSeguridad.Size = new System.Drawing.Size(294, 22);
+            this.mnuRSeguridad.Size = new System.Drawing.Size(133, 22);
             this.mnuRSeguridad.Text = "Seguridad";
             // 
             // mnuIU_REPORTE_DICCIONARIO_DATOS
@@ -208,7 +208,7 @@ namespace SIPV.Main
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(291, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(130, 6);
             // 
             // mnuConsultas
             // 
@@ -269,10 +269,10 @@ namespace SIPV.Main
             this.LbGrupo,
             this.toolStripStatusLabel1,
             this.LbUsuario});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 416);
+            this.statusStrip1.Location = new System.Drawing.Point(209, 416);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
-            this.statusStrip1.Size = new System.Drawing.Size(842, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(432, 22);
             this.statusStrip1.TabIndex = 4;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -333,11 +333,11 @@ namespace SIPV.Main
             this.panel1.Controls.Add(this.TvTransacciones);
             this.panel1.Controls.Add(this.TvMantenimientos);
             this.panel1.Controls.Add(this.outlookBar1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Padding = new System.Windows.Forms.Padding(3);
-            this.panel1.Size = new System.Drawing.Size(209, 415);
+            this.panel1.Size = new System.Drawing.Size(209, 438);
             this.panel1.TabIndex = 3;
             // 
             // TvProcesos
@@ -348,7 +348,7 @@ namespace SIPV.Main
             this.TvProcesos.Location = new System.Drawing.Point(209, 3);
             this.TvProcesos.Name = "TvProcesos";
             this.TvProcesos.SelectedImageIndex = 0;
-            this.TvProcesos.Size = new System.Drawing.Size(40, 188);
+            this.TvProcesos.Size = new System.Drawing.Size(40, 211);
             this.TvProcesos.TabIndex = 27;
             this.TvProcesos.Visible = false;
             this.TvProcesos.DoubleClick += new System.EventHandler(this.TreeView_DoubleClick);
@@ -370,7 +370,7 @@ namespace SIPV.Main
             this.TvAyuda.Location = new System.Drawing.Point(178, 3);
             this.TvAyuda.Name = "TvAyuda";
             this.TvAyuda.SelectedImageIndex = 0;
-            this.TvAyuda.Size = new System.Drawing.Size(31, 188);
+            this.TvAyuda.Size = new System.Drawing.Size(31, 211);
             this.TvAyuda.TabIndex = 26;
             this.TvAyuda.Visible = false;
             this.TvAyuda.DoubleClick += new System.EventHandler(this.TreeView_DoubleClick);
@@ -383,7 +383,7 @@ namespace SIPV.Main
             this.TvUtilitarios.Location = new System.Drawing.Point(161, 3);
             this.TvUtilitarios.Name = "TvUtilitarios";
             this.TvUtilitarios.SelectedImageIndex = 0;
-            this.TvUtilitarios.Size = new System.Drawing.Size(17, 188);
+            this.TvUtilitarios.Size = new System.Drawing.Size(17, 211);
             this.TvUtilitarios.TabIndex = 25;
             this.TvUtilitarios.Visible = false;
             this.TvUtilitarios.DoubleClick += new System.EventHandler(this.TreeView_DoubleClick);
@@ -396,7 +396,7 @@ namespace SIPV.Main
             this.TvReportes.Location = new System.Drawing.Point(120, 3);
             this.TvReportes.Name = "TvReportes";
             this.TvReportes.SelectedImageIndex = 0;
-            this.TvReportes.Size = new System.Drawing.Size(41, 188);
+            this.TvReportes.Size = new System.Drawing.Size(41, 211);
             this.TvReportes.TabIndex = 24;
             this.TvReportes.Visible = false;
             this.TvReportes.DoubleClick += new System.EventHandler(this.TreeView_DoubleClick);
@@ -409,7 +409,7 @@ namespace SIPV.Main
             this.TvConsultas.Location = new System.Drawing.Point(83, 3);
             this.TvConsultas.Name = "TvConsultas";
             this.TvConsultas.SelectedImageIndex = 0;
-            this.TvConsultas.Size = new System.Drawing.Size(37, 188);
+            this.TvConsultas.Size = new System.Drawing.Size(37, 211);
             this.TvConsultas.TabIndex = 23;
             this.TvConsultas.Visible = false;
             this.TvConsultas.DoubleClick += new System.EventHandler(this.TreeView_DoubleClick);
@@ -422,7 +422,7 @@ namespace SIPV.Main
             this.TvTransacciones.Location = new System.Drawing.Point(43, 3);
             this.TvTransacciones.Name = "TvTransacciones";
             this.TvTransacciones.SelectedImageIndex = 0;
-            this.TvTransacciones.Size = new System.Drawing.Size(40, 188);
+            this.TvTransacciones.Size = new System.Drawing.Size(40, 211);
             this.TvTransacciones.TabIndex = 22;
             this.TvTransacciones.Visible = false;
             this.TvTransacciones.DoubleClick += new System.EventHandler(this.TreeView_DoubleClick);
@@ -435,7 +435,7 @@ namespace SIPV.Main
             this.TvMantenimientos.Location = new System.Drawing.Point(3, 3);
             this.TvMantenimientos.Name = "TvMantenimientos";
             this.TvMantenimientos.SelectedImageIndex = 0;
-            this.TvMantenimientos.Size = new System.Drawing.Size(40, 188);
+            this.TvMantenimientos.Size = new System.Drawing.Size(40, 211);
             this.TvMantenimientos.TabIndex = 21;
             this.TvMantenimientos.Visible = false;
             this.TvMantenimientos.DoubleClick += new System.EventHandler(this.TreeView_DoubleClick);
@@ -444,41 +444,41 @@ namespace SIPV.Main
             // 
             this.outlookBar1.BackColor = System.Drawing.SystemColors.Highlight;
             this.outlookBar1.ButtonHeight = 30;
-            outlookBarButton15.Enabled = true;
-            outlookBarButton15.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton15.Image")));
-            outlookBarButton15.Tag = null;
-            outlookBarButton15.Text = "Mantenimientos";
-            outlookBarButton16.Enabled = true;
-            outlookBarButton16.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton16.Image")));
-            outlookBarButton16.Tag = null;
-            outlookBarButton16.Text = "Transacciones";
-            outlookBarButton17.Enabled = true;
-            outlookBarButton17.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton17.Image")));
-            outlookBarButton17.Tag = null;
-            outlookBarButton17.Text = "Procesos";
-            outlookBarButton18.Enabled = true;
-            outlookBarButton18.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton18.Image")));
-            outlookBarButton18.Tag = null;
-            outlookBarButton18.Text = "Reportes";
-            outlookBarButton19.Enabled = true;
-            outlookBarButton19.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton19.Image")));
-            outlookBarButton19.Tag = null;
-            outlookBarButton19.Text = "Consultas";
-            outlookBarButton20.Enabled = true;
-            outlookBarButton20.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton20.Image")));
-            outlookBarButton20.Tag = null;
-            outlookBarButton20.Text = "Utilitarios";
-            outlookBarButton21.Enabled = true;
-            outlookBarButton21.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton21.Image")));
-            outlookBarButton21.Tag = null;
-            outlookBarButton21.Text = "Ayuda";
-            this.outlookBar1.Buttons.Add(outlookBarButton15);
-            this.outlookBar1.Buttons.Add(outlookBarButton16);
-            this.outlookBar1.Buttons.Add(outlookBarButton17);
-            this.outlookBar1.Buttons.Add(outlookBarButton18);
-            this.outlookBar1.Buttons.Add(outlookBarButton19);
-            this.outlookBar1.Buttons.Add(outlookBarButton20);
-            this.outlookBar1.Buttons.Add(outlookBarButton21);
+            outlookBarButton1.Enabled = true;
+            outlookBarButton1.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton1.Image")));
+            outlookBarButton1.Tag = null;
+            outlookBarButton1.Text = "Mantenimientos";
+            outlookBarButton2.Enabled = true;
+            outlookBarButton2.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton2.Image")));
+            outlookBarButton2.Tag = null;
+            outlookBarButton2.Text = "Transacciones";
+            outlookBarButton3.Enabled = true;
+            outlookBarButton3.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton3.Image")));
+            outlookBarButton3.Tag = null;
+            outlookBarButton3.Text = "Procesos";
+            outlookBarButton4.Enabled = true;
+            outlookBarButton4.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton4.Image")));
+            outlookBarButton4.Tag = null;
+            outlookBarButton4.Text = "Reportes";
+            outlookBarButton5.Enabled = true;
+            outlookBarButton5.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton5.Image")));
+            outlookBarButton5.Tag = null;
+            outlookBarButton5.Text = "Consultas";
+            outlookBarButton6.Enabled = true;
+            outlookBarButton6.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton6.Image")));
+            outlookBarButton6.Tag = null;
+            outlookBarButton6.Text = "Utilitarios";
+            outlookBarButton7.Enabled = true;
+            outlookBarButton7.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton7.Image")));
+            outlookBarButton7.Tag = null;
+            outlookBarButton7.Text = "Ayuda";
+            this.outlookBar1.Buttons.Add(outlookBarButton1);
+            this.outlookBar1.Buttons.Add(outlookBarButton2);
+            this.outlookBar1.Buttons.Add(outlookBarButton3);
+            this.outlookBar1.Buttons.Add(outlookBarButton4);
+            this.outlookBar1.Buttons.Add(outlookBarButton5);
+            this.outlookBar1.Buttons.Add(outlookBarButton6);
+            this.outlookBar1.Buttons.Add(outlookBarButton7);
             this.outlookBar1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.outlookBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.outlookBar1.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
@@ -488,7 +488,7 @@ namespace SIPV.Main
             this.outlookBar1.GradientButtonNormalLight = System.Drawing.Color.FromArgb(((int)(((byte)(203)))), ((int)(((byte)(225)))), ((int)(((byte)(252)))));
             this.outlookBar1.GradientButtonSelectedDark = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(150)))), ((int)(((byte)(21)))));
             this.outlookBar1.GradientButtonSelectedLight = System.Drawing.Color.FromArgb(((int)(((byte)(251)))), ((int)(((byte)(230)))), ((int)(((byte)(148)))));
-            this.outlookBar1.Location = new System.Drawing.Point(3, 191);
+            this.outlookBar1.Location = new System.Drawing.Point(3, 214);
             this.outlookBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.outlookBar1.Name = "outlookBar1";
             this.outlookBar1.SelectedButton = null;
@@ -513,9 +513,9 @@ namespace SIPV.Main
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.SizeWE;
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(209, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(10, 392);
+            this.pictureBox1.Size = new System.Drawing.Size(13, 392);
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
@@ -538,10 +538,11 @@ namespace SIPV.Main
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(842, 438);
+            this.ClientSize = new System.Drawing.Size(641, 438);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.mnuPrincipal_);
+            this.Controls.Add(this.panel1);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.mnuPrincipal_;
             this.Name = "mnuSIPV";
