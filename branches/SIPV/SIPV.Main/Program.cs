@@ -6,7 +6,7 @@ using BaseCode;
 using System.Configuration;
 namespace SIPV.Main
 {
-    static class Program
+    static class Program 
     {
         /// <summary>
         /// The main entry point for the application.
@@ -14,6 +14,7 @@ namespace SIPV.Main
         [STAThread]
         static void Main()
         {
+            //Test de cambio
             DB vDB = new DB();
             vDB.Servidor = System.Configuration.ConfigurationManager.AppSettings["Server"].ToString() ;//  "SQLDELTA1";
             vDB.BaseDatos = System.Configuration.ConfigurationManager.AppSettings["DataBase"].ToString();
