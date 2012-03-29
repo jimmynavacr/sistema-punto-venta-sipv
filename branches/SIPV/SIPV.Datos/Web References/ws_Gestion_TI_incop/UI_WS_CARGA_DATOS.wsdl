@@ -1,0 +1,565 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="Actualizar_Maestro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mTable">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Tabla" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Muelle" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Actualizar_MaestroResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Cargar_Transacciones">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="mTable">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+            <s:element minOccurs="0" maxOccurs="1" name="Tabla" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Muelle" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="Periodo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Cargar_TransaccionesResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Consultar_Periodos">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="muelle" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consultar_PeriodosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consultar_PeriodosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consultar_Transmision">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="muelle" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="periodo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consultar_TransmisionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consultar_TransmisionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Registrar_Cifra_Control">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Catalogo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Muelle" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="periodo" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="Registros" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Registrar_Cifra_ControlResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Actualizar_Equivalencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Catalogo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Muelle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Id_unificado" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Id_Muelle" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Actualizar_EquivalenciaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Consultar_Equivalencia">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Maestro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Muelle" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consultar_EquivalenciaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consultar_EquivalenciaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Listar_Maestro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Maestro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Listar_MaestroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Listar_MaestroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consultar_Registro_Maestro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Maestro" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Codigo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Descripcion" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Filtrar" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Consultar_Registro_MaestroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Consultar_Registro_MaestroResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:any minOccurs="0" maxOccurs="unbounded" namespace="http://www.w3.org/2001/XMLSchema" processContents="lax" />
+                  <s:any minOccurs="1" namespace="urn:schemas-microsoft-com:xml-diffgram-v1" processContents="lax" />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Iniciar_Transmision">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="muelle" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="periodo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Iniciar_TransmisionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Finalizar_Transmision">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="muelle" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Finalizar_TransmisionResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="Cancelar_Transmision">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="muelle" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="periodo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="Cancelar_TransmisionResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="Actualizar_MaestroSoapIn">
+    <wsdl:part name="parameters" element="tns:Actualizar_Maestro" />
+  </wsdl:message>
+  <wsdl:message name="Actualizar_MaestroSoapOut">
+    <wsdl:part name="parameters" element="tns:Actualizar_MaestroResponse" />
+  </wsdl:message>
+  <wsdl:message name="Cargar_TransaccionesSoapIn">
+    <wsdl:part name="parameters" element="tns:Cargar_Transacciones" />
+  </wsdl:message>
+  <wsdl:message name="Cargar_TransaccionesSoapOut">
+    <wsdl:part name="parameters" element="tns:Cargar_TransaccionesResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_PeriodosSoapIn">
+    <wsdl:part name="parameters" element="tns:Consultar_Periodos" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_PeriodosSoapOut">
+    <wsdl:part name="parameters" element="tns:Consultar_PeriodosResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_TransmisionSoapIn">
+    <wsdl:part name="parameters" element="tns:Consultar_Transmision" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_TransmisionSoapOut">
+    <wsdl:part name="parameters" element="tns:Consultar_TransmisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Registrar_Cifra_ControlSoapIn">
+    <wsdl:part name="parameters" element="tns:Registrar_Cifra_Control" />
+  </wsdl:message>
+  <wsdl:message name="Registrar_Cifra_ControlSoapOut">
+    <wsdl:part name="parameters" element="tns:Registrar_Cifra_ControlResponse" />
+  </wsdl:message>
+  <wsdl:message name="Actualizar_EquivalenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:Actualizar_Equivalencia" />
+  </wsdl:message>
+  <wsdl:message name="Actualizar_EquivalenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:Actualizar_EquivalenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_EquivalenciaSoapIn">
+    <wsdl:part name="parameters" element="tns:Consultar_Equivalencia" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_EquivalenciaSoapOut">
+    <wsdl:part name="parameters" element="tns:Consultar_EquivalenciaResponse" />
+  </wsdl:message>
+  <wsdl:message name="Listar_MaestroSoapIn">
+    <wsdl:part name="parameters" element="tns:Listar_Maestro" />
+  </wsdl:message>
+  <wsdl:message name="Listar_MaestroSoapOut">
+    <wsdl:part name="parameters" element="tns:Listar_MaestroResponse" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_Registro_MaestroSoapIn">
+    <wsdl:part name="parameters" element="tns:Consultar_Registro_Maestro" />
+  </wsdl:message>
+  <wsdl:message name="Consultar_Registro_MaestroSoapOut">
+    <wsdl:part name="parameters" element="tns:Consultar_Registro_MaestroResponse" />
+  </wsdl:message>
+  <wsdl:message name="Iniciar_TransmisionSoapIn">
+    <wsdl:part name="parameters" element="tns:Iniciar_Transmision" />
+  </wsdl:message>
+  <wsdl:message name="Iniciar_TransmisionSoapOut">
+    <wsdl:part name="parameters" element="tns:Iniciar_TransmisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Finalizar_TransmisionSoapIn">
+    <wsdl:part name="parameters" element="tns:Finalizar_Transmision" />
+  </wsdl:message>
+  <wsdl:message name="Finalizar_TransmisionSoapOut">
+    <wsdl:part name="parameters" element="tns:Finalizar_TransmisionResponse" />
+  </wsdl:message>
+  <wsdl:message name="Cancelar_TransmisionSoapIn">
+    <wsdl:part name="parameters" element="tns:Cancelar_Transmision" />
+  </wsdl:message>
+  <wsdl:message name="Cancelar_TransmisionSoapOut">
+    <wsdl:part name="parameters" element="tns:Cancelar_TransmisionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="UI_WS_CARGA_DATOSSoap">
+    <wsdl:operation name="Actualizar_Maestro">
+      <wsdl:input message="tns:Actualizar_MaestroSoapIn" />
+      <wsdl:output message="tns:Actualizar_MaestroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Cargar_Transacciones">
+      <wsdl:input message="tns:Cargar_TransaccionesSoapIn" />
+      <wsdl:output message="tns:Cargar_TransaccionesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Periodos">
+      <wsdl:input message="tns:Consultar_PeriodosSoapIn" />
+      <wsdl:output message="tns:Consultar_PeriodosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Transmision">
+      <wsdl:input message="tns:Consultar_TransmisionSoapIn" />
+      <wsdl:output message="tns:Consultar_TransmisionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Registrar_Cifra_Control">
+      <wsdl:input message="tns:Registrar_Cifra_ControlSoapIn" />
+      <wsdl:output message="tns:Registrar_Cifra_ControlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_Equivalencia">
+      <wsdl:input message="tns:Actualizar_EquivalenciaSoapIn" />
+      <wsdl:output message="tns:Actualizar_EquivalenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Equivalencia">
+      <wsdl:input message="tns:Consultar_EquivalenciaSoapIn" />
+      <wsdl:output message="tns:Consultar_EquivalenciaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Listar_Maestro">
+      <wsdl:input message="tns:Listar_MaestroSoapIn" />
+      <wsdl:output message="tns:Listar_MaestroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Registro_Maestro">
+      <wsdl:input message="tns:Consultar_Registro_MaestroSoapIn" />
+      <wsdl:output message="tns:Consultar_Registro_MaestroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Iniciar_Transmision">
+      <wsdl:input message="tns:Iniciar_TransmisionSoapIn" />
+      <wsdl:output message="tns:Iniciar_TransmisionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Finalizar_Transmision">
+      <wsdl:input message="tns:Finalizar_TransmisionSoapIn" />
+      <wsdl:output message="tns:Finalizar_TransmisionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="Cancelar_Transmision">
+      <wsdl:input message="tns:Cancelar_TransmisionSoapIn" />
+      <wsdl:output message="tns:Cancelar_TransmisionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UI_WS_CARGA_DATOSSoap" type="tns:UI_WS_CARGA_DATOSSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Actualizar_Maestro">
+      <soap:operation soapAction="http://tempuri.org/Actualizar_Maestro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cargar_Transacciones">
+      <soap:operation soapAction="http://tempuri.org/Cargar_Transacciones" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Periodos">
+      <soap:operation soapAction="http://tempuri.org/Consultar_Periodos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Transmision">
+      <soap:operation soapAction="http://tempuri.org/Consultar_Transmision" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registrar_Cifra_Control">
+      <soap:operation soapAction="http://tempuri.org/Registrar_Cifra_Control" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_Equivalencia">
+      <soap:operation soapAction="http://tempuri.org/Actualizar_Equivalencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Equivalencia">
+      <soap:operation soapAction="http://tempuri.org/Consultar_Equivalencia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listar_Maestro">
+      <soap:operation soapAction="http://tempuri.org/Listar_Maestro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Registro_Maestro">
+      <soap:operation soapAction="http://tempuri.org/Consultar_Registro_Maestro" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Iniciar_Transmision">
+      <soap:operation soapAction="http://tempuri.org/Iniciar_Transmision" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Finalizar_Transmision">
+      <soap:operation soapAction="http://tempuri.org/Finalizar_Transmision" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cancelar_Transmision">
+      <soap:operation soapAction="http://tempuri.org/Cancelar_Transmision" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="UI_WS_CARGA_DATOSSoap12" type="tns:UI_WS_CARGA_DATOSSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="Actualizar_Maestro">
+      <soap12:operation soapAction="http://tempuri.org/Actualizar_Maestro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cargar_Transacciones">
+      <soap12:operation soapAction="http://tempuri.org/Cargar_Transacciones" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Periodos">
+      <soap12:operation soapAction="http://tempuri.org/Consultar_Periodos" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Transmision">
+      <soap12:operation soapAction="http://tempuri.org/Consultar_Transmision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Registrar_Cifra_Control">
+      <soap12:operation soapAction="http://tempuri.org/Registrar_Cifra_Control" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Actualizar_Equivalencia">
+      <soap12:operation soapAction="http://tempuri.org/Actualizar_Equivalencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Equivalencia">
+      <soap12:operation soapAction="http://tempuri.org/Consultar_Equivalencia" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Listar_Maestro">
+      <soap12:operation soapAction="http://tempuri.org/Listar_Maestro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Consultar_Registro_Maestro">
+      <soap12:operation soapAction="http://tempuri.org/Consultar_Registro_Maestro" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Iniciar_Transmision">
+      <soap12:operation soapAction="http://tempuri.org/Iniciar_Transmision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Finalizar_Transmision">
+      <soap12:operation soapAction="http://tempuri.org/Finalizar_Transmision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Cancelar_Transmision">
+      <soap12:operation soapAction="http://tempuri.org/Cancelar_Transmision" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UI_WS_CARGA_DATOS">
+    <wsdl:port name="UI_WS_CARGA_DATOSSoap" binding="tns:UI_WS_CARGA_DATOSSoap">
+      <soap:address location="http://localhost:51642/SIPV.Web/UI_WS_CARGA_DATOS.asmx" />
+    </wsdl:port>
+    <wsdl:port name="UI_WS_CARGA_DATOSSoap12" binding="tns:UI_WS_CARGA_DATOSSoap12">
+      <soap12:address location="http://localhost:51642/SIPV.Web/UI_WS_CARGA_DATOS.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

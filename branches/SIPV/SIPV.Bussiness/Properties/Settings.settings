@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SIPV.Bussiness.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="SIPV_Bussiness_ws_SIPV_SIPV_UI_WS_CARGA_DATOS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:51642/SIPV.Web/UI_WS_CARGA_DATOS.asmx</Value>
+    </Setting>
+    <Setting Name="SIPV_Bussiness_SIPV_SIPV_SIPV_SIPV" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.puertodecaldera.com/app_operaciones/SIPV_SIPV.asmx</Value>
+    </Setting>
+    <Setting Name="Estadisticas_Bussiness_Estadisticas_SIPV_Estadisticas_SIPV" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://www.puertodecaldera.com/app_operaciones/Estadisticas_SIPV.asmx</Value>
+    </Setting>
+    <Setting Name="Estadisticas_Bussiness_ws_estadisticas_SIPV_UI_WS_CARGA_DATOS" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://localhost:51642/SIPV.Web/UI_WS_CARGA_DATOS.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
