@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsReportes" targetNamespace="http://tempuri.org/DsReportes.xsd" xmlns:mstns="http://tempuri.org/DsReportes.xsd" xmlns="http://tempuri.org/DsReportes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="5" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="EstadisticaConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="EstadisticaConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SIPV.Windows.Properties.Settings.GlobalReference.Default.EstadisticaConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="EstadisticaConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="EstadisticaConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SIPV.Windows.Properties.Settings.GlobalReference.Default.EstadisticaConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SIPVConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SIPVConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SIPV.Windows.Properties.Settings.GlobalReference.Default.SIPVConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SIPVConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SIPVConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SIPV.Windows.Properties.Settings.GlobalReference.Default.SIPVConnectionString1" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SIPV2ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SIPV2ConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SIPV.Windows.Properties.Settings.GlobalReference.Default.SIPV2ConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="SIPV2ConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="SIPV2ConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.SIPV.Windows.Properties.Settings.GlobalReference.Default.SIPV2ConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="VisDiccionarioDatosTableAdapter" GeneratorDataComponentClassName="VisDiccionarioDatosTableAdapter" Name="VisDiccionarioDatos" UserDataComponentName="VisDiccionarioDatosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="EstadisticaConnectionString (Settings)" DbObjectName="Estadistica.dbo.VisDiccionarioDatos" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT TABLA, DESCRIPCION_TABLA, COLUMNA, TIPO, LONGITUD, PRECISION, DESCRIPCION_CAMPO FROM dbo.VisDiccionarioDatos</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="TABLA" DataSetColumn="TABLA" />
+              <Mapping SourceColumn="DESCRIPCION_TABLA" DataSetColumn="DESCRIPCION_TABLA" />
+              <Mapping SourceColumn="COLUMNA" DataSetColumn="COLUMNA" />
+              <Mapping SourceColumn="TIPO" DataSetColumn="TIPO" />
+              <Mapping SourceColumn="LONGITUD" DataSetColumn="LONGITUD" />
+              <Mapping SourceColumn="PRECISION" DataSetColumn="PRECISION" />
+              <Mapping SourceColumn="DESCRIPCION_CAMPO" DataSetColumn="DESCRIPCION_CAMPO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsReportes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsReportes" msprop:Generator_DataSetName="DsReportes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="IMAGEN" msprop:Generator_UserTableName="IMAGEN" msprop:Generator_RowDeletedName="IMAGENRowDeleted" msprop:Generator_RowChangedName="IMAGENRowChanged" msprop:Generator_RowClassName="IMAGENRow" msprop:Generator_RowChangingName="IMAGENRowChanging" msprop:Generator_RowEvArgName="IMAGENRowChangeEvent" msprop:Generator_RowEvHandlerName="IMAGENRowChangeEventHandler" msprop:Generator_TableClassName="IMAGENDataTable" msprop:Generator_TableVarName="tableIMAGEN" msprop:Generator_RowDeletingName="IMAGENRowDeleting" msprop:Generator_TablePropName="IMAGEN">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="LOGO" msprop:Generator_UserColumnName="LOGO" msprop:Generator_ColumnVarNameInTable="columnLOGO" msprop:Generator_ColumnPropNameInRow="LOGO" msprop:Generator_ColumnPropNameInTable="LOGOColumn" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="VisDiccionarioDatos" msprop:Generator_UserTableName="VisDiccionarioDatos" msprop:Generator_RowDeletedName="VisDiccionarioDatosRowDeleted" msprop:Generator_RowChangedName="VisDiccionarioDatosRowChanged" msprop:Generator_RowClassName="VisDiccionarioDatosRow" msprop:Generator_RowChangingName="VisDiccionarioDatosRowChanging" msprop:Generator_RowEvArgName="VisDiccionarioDatosRowChangeEvent" msprop:Generator_RowEvHandlerName="VisDiccionarioDatosRowChangeEventHandler" msprop:Generator_TableClassName="VisDiccionarioDatosDataTable" msprop:Generator_TableVarName="tableVisDiccionarioDatos" msprop:Generator_RowDeletingName="VisDiccionarioDatosRowDeleting" msprop:Generator_TablePropName="VisDiccionarioDatos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TABLA" msprop:Generator_UserColumnName="TABLA" msprop:Generator_ColumnPropNameInRow="TABLA" msprop:Generator_ColumnVarNameInTable="columnTABLA" msprop:Generator_ColumnPropNameInTable="TABLAColumn">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRIPCION_TABLA" msprop:Generator_UserColumnName="DESCRIPCION_TABLA" msprop:Generator_ColumnPropNameInRow="DESCRIPCION_TABLA" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION_TABLA" msprop:Generator_ColumnPropNameInTable="DESCRIPCION_TABLAColumn" type="xs:anyType" />
+              <xs:element name="COLUMNA" msprop:Generator_UserColumnName="COLUMNA" msprop:Generator_ColumnPropNameInRow="COLUMNA" msprop:Generator_ColumnVarNameInTable="columnCOLUMNA" msprop:Generator_ColumnPropNameInTable="COLUMNAColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO" msprop:Generator_UserColumnName="TIPO" msprop:Generator_ColumnPropNameInRow="TIPO" msprop:Generator_ColumnVarNameInTable="columnTIPO" msprop:Generator_ColumnPropNameInTable="TIPOColumn" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="128" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LONGITUD" msprop:Generator_UserColumnName="LONGITUD" msprop:Generator_ColumnPropNameInRow="LONGITUD" msprop:Generator_ColumnVarNameInTable="columnLONGITUD" msprop:Generator_ColumnPropNameInTable="LONGITUDColumn" type="xs:short" />
+              <xs:element name="PRECISION" msprop:Generator_UserColumnName="PRECISION" msprop:Generator_ColumnPropNameInRow="PRECISION" msprop:Generator_ColumnVarNameInTable="columnPRECISION" msprop:Generator_ColumnPropNameInTable="PRECISIONColumn" type="xs:unsignedByte" />
+              <xs:element name="DESCRIPCION_CAMPO" msprop:Generator_UserColumnName="DESCRIPCION_CAMPO" msprop:Generator_ColumnPropNameInRow="DESCRIPCION_CAMPO" msprop:Generator_ColumnVarNameInTable="columnDESCRIPCION_CAMPO" msprop:Generator_ColumnPropNameInTable="DESCRIPCION_CAMPOColumn" type="xs:anyType" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
