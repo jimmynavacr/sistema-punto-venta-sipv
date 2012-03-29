@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("SIPV.Security")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Instituto Costarricence de Puertos del Pacífico")]
+[assembly: AssemblyCompany("Universidad Latinamericana de Ciencia y Tecnología")]
 [assembly: AssemblyProduct("SIPV.Security")]
-[assembly: AssemblyCopyright("Copyright © Instituto Costarricence de Puertos del Pacífico 2010")]
+[assembly: AssemblyCopyright("Copyright © ULACIT 2012")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
