@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIPV.Bussiness", "SIPV.Buss
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIPV.Windows", "SIPV.Windows\SIPV.Windows.csproj", "{7CEE6802-EFCB-4ED9-99CC-3AF84E88609F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIPV.Library", "SIPV.Library\SIPV.Library.csproj", "{A52D1B57-28D8-4A14-9405-677E3C67E591}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -102,6 +104,21 @@ Global
 		{7CEE6802-EFCB-4ED9-99CC-3AF84E88609F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7CEE6802-EFCB-4ED9-99CC-3AF84E88609F}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{7CEE6802-EFCB-4ED9-99CC-3AF84E88609F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A52D1B57-28D8-4A14-9405-677E3C67E591}.Debug|.NET.ActiveCfg = Debug|Any CPU
+		{A52D1B57-28D8-4A14-9405-677E3C67E591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A52D1B57-28D8-4A14-9405-677E3C67E591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A52D1B57-28D8-4A14-9405-677E3C67E591}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A52D1B57-28D8-4A14-9405-677E3C67E591}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A52D1B57-28D8-4A14-9405-677E3C67E591}.Development|.NET.ActiveCfg = Debug|Any CPU
+		{A52D1B57-28D8-4A14-9405-677E3C67E591}.Development|Any CPU.ActiveCfg = Debug|Any CPU
+		{A52D1B57-28D8-4A14-9405-677E3C67E591}.Development|Any CPU.Build.0 = Debug|Any CPU
+		{A52D1B57-28D8-4A14-9405-677E3C67E591}.Development|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A52D1B57-28D8-4A14-9405-677E3C67E591}.Development|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A52D1B57-28D8-4A14-9405-677E3C67E591}.Release|.NET.ActiveCfg = Release|Any CPU
+		{A52D1B57-28D8-4A14-9405-677E3C67E591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A52D1B57-28D8-4A14-9405-677E3C67E591}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A52D1B57-28D8-4A14-9405-677E3C67E591}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A52D1B57-28D8-4A14-9405-677E3C67E591}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
