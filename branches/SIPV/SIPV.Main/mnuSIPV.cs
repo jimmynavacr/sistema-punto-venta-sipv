@@ -289,11 +289,7 @@ namespace SIPV.Main
 
             private void mnuPrivilegios_Click(object sender, EventArgs e)
             {
-                //MostrarForma(new SIPV.Security.frmPrivilegiosMnu(this, vDB));
-            }
-            private void mnuIU_ESTADO_POLIZA_Click(object sender, EventArgs e)
-            {
-                //MostrarForma(new SIPV.Windows.Catalogos.IU_ESTADO_POLIZA(vDB, this));
+                MostrarForma(new SIPV.Security.frmPrivilegiosMnu(this, vDB));
             }
 
             #endregion        

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A52D1B57-28D8-4A14-9405-677E3C67E591}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SIPV.Library_</RootNamespace>
+    <AssemblyName>SIPV.Library_</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BaseCode.dll" />
+    <Content Include="BaseCode.pdb" />
+    <Content Include="CrystalDecisions.CrystalReports.Engine.dll" />
+    <Content Include="CrystalDecisions.CrystalReports.Engine.xml" />
+    <Content Include="CrystalDecisions.Data.AdoDotNetInterop.dll" />
+    <Content Include="CrystalDecisions.Enterprise.Framework.dll" />
+    <Content Include="CrystalDecisions.Enterprise.InfoStore.dll" />
+    <Content Include="CrystalDecisions.ReportSource.dll" />
+    <Content Include="CrystalDecisions.ReportSource.xml" />
+    <Content Include="CrystalDecisions.VSDesigner.dll" />
+    <Content Include="CrystalDecisions.Web.dll" />
+    <Content Include="CrystalDecisions.Web.xml" />
+    <Content Include="CrystalDecisions.Windows.Forms.dll" />
+    <Content Include="CrystalDecisions.Windows.Forms.xml" />
+    <Content Include="Images\Logo.jpg" />
+    <Content Include="Interop.Office.dll" />
+    <Content Include="itextsharp.dll" />
+    <Content Include="lib\gsdll32.dll" />
+    <Content Include="lib\itextsharp.dll" />
+    <Content Include="lib\PDFLibNet.dll" />
+    <Content Include="lib\tessnet2_32.dll" />
+    <Content Include="Microsoft.Office.Interop.Excel.dll" />
+    <Content Include="Microsoft.Vbe.Interop.dll" />
+    <Content Include="office.dll" />
+    <Content Include="office.xml" />
+    <Content Include="PDFLibNet.dll" />
+    <Content Include="sharpPDF.dll" />
+    <Content Include="System.Runtime.InteropServices.APIs.dll" />
+    <Content Include="System.Runtime.InteropServices.APIs.pdb" />
+    <Content Include="System.Runtime.InteropServices.APIs.xml" />
+    <Content Include="System.Windows.Forms.TreeListView.dll" />
+    <Content Include="System.Windows.Forms.TreeListView.pdb" />
+    <Content Include="System.Xml.dll" />
+    <Content Include="System.Xml.Linq.dll" />
+    <Content Include="tessnet2_32.dll" />
+    <Content Include="WindowsBase.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Visores\VisorPDF\tessdata\eng.DangAmbigs" />
+    <None Include="Visores\VisorPDF\tessdata\eng.freq-dawg" />
+    <None Include="Visores\VisorPDF\tessdata\eng.inttemp" />
+    <None Include="Visores\VisorPDF\tessdata\eng.normproto" />
+    <None Include="Visores\VisorPDF\tessdata\eng.pffmtable" />
+    <None Include="Visores\VisorPDF\tessdata\eng.unicharset" />
+    <None Include="Visores\VisorPDF\tessdata\eng.user-words" />
+    <None Include="Visores\VisorPDF\tessdata\eng.word-dawg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Log\" />
+    <Folder Include="Temp\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
