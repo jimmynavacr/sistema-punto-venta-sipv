@@ -22,35 +22,5 @@ namespace SIPV.Datos.Properties {
                 return defaultInstance;
             }
         }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:51642/SIPV.Web/UI_WS_CARGA_DATOS.asmx")]
-        public string SIPV_Datos_ws_SIPV_SIPV_UI_WS_CARGA_DATOS {
-            get {
-                return ((string)(this["SIPV_Datos_ws_SIPV_SIPV_UI_WS_CARGA_DATOS"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:51642/SIPV.Web/UI_WS_CARGA_DATOS.asmx")]
-        public string Estadisticas_Datos_ws_estadisticas_SIPV_UI_WS_CARGA_DATOS {
-            get {
-                return ((string)(this["Estadisticas_Datos_ws_estadisticas_SIPV_UI_WS_CARGA_DATOS"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.WebServiceUrl)]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://localhost:51642/SIPV.Web/UI_WS_CARGA_DATOS.asmx")]
-        public string Estadisticas_Datos_ws_estadisticas_incop_UI_WS_CARGA_DATOS {
-            get {
-                return ((string)(this["Estadisticas_Datos_ws_estadisticas_incop_UI_WS_CARGA_DATOS"]));
-            }
-        }
     }
 }
