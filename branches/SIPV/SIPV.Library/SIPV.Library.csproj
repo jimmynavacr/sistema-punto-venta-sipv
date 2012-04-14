@@ -58,6 +58,8 @@
     <Content Include="CrystalDecisions.Enterprise.InfoStore.dll" />
     <Content Include="CrystalDecisions.ReportSource.dll" />
     <Content Include="CrystalDecisions.ReportSource.xml" />
+    <Content Include="CrystalDecisions.Shared.dll" />
+    <Content Include="CrystalDecisions.Shared.xml" />
     <Content Include="CrystalDecisions.VSDesigner.dll" />
     <Content Include="CrystalDecisions.Web.dll" />
     <Content Include="CrystalDecisions.Web.xml" />
