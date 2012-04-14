@@ -319,6 +319,13 @@ namespace SIPV.Main
 
             #endregion
 
+            private void mnuIU_TIPO_ENTIDAD_Click(object sender, EventArgs e)
+            {
+                MostrarForma(new SIPV.Windows.Catalogos.IU_TIPO_ENTIDAD(vDB,this));
+            }
+
+
+
 
 
 

@@ -59,7 +59,7 @@
     <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BaseCode, Version=1.0.4470.3781, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="BaseCode, Version=1.0.4486.2212, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\SIPV.Library\BaseCode.dll</HintPath>
     </Reference>

@@ -50,7 +50,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="BaseCode, Version=1.0.4470.3781, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="BaseCode, Version=1.0.4486.2212, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\SIPV.Library\BaseCode.dll</HintPath>
     </Reference>
@@ -72,18 +72,10 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="System.Management" />
-    <Reference Include="System.Runtime.InteropServices.APIs, Version=1.0.3702.20875, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\System.Runtime.InteropServices.APIs.dll</HintPath>
-    </Reference>
     <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Windows.Forms.TreeListView, Version=1.0.3702.20876, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\System.Windows.Forms.TreeListView.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -93,11 +85,11 @@
     <Compile Include="Catalogos\Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Catalogos\IU_ESTADO_ACTIVO.cs">
+    <Compile Include="Catalogos\IU_TIPO_ENTIDAD.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Catalogos\IU_ESTADO_ACTIVO.Designer.cs">
-      <DependentUpon>IU_ESTADO_ACTIVO.cs</DependentUpon>
+    <Compile Include="Catalogos\IU_TIPO_ENTIDAD.Designer.cs">
+      <DependentUpon>IU_TIPO_ENTIDAD.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAcerca.cs">
       <SubType>Form</SubType>
@@ -116,8 +108,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Catalogos\IU_ESTADO_ACTIVO.resx">
-      <DependentUpon>IU_ESTADO_ACTIVO.cs</DependentUpon>
+    <EmbeddedResource Include="Catalogos\IU_TIPO_ENTIDAD.resx">
+      <DependentUpon>IU_TIPO_ENTIDAD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAcerca.resx">
       <DependentUpon>frmAcerca.cs</DependentUpon>
