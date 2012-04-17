@@ -83,6 +83,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogos\IU_ENTIDAD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\IU_ENTIDAD.Designer.cs">
+      <DependentUpon>IU_ENTIDAD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Catalogos\IU_ENTIDAD.resx">
+      <DependentUpon>IU_ENTIDAD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\IU_TIPO_ENTIDAD.resx">
       <DependentUpon>IU_TIPO_ENTIDAD.cs</DependentUpon>
     </EmbeddedResource>

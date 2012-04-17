@@ -30,13 +30,13 @@ namespace SIPV.Main
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(mnuSIPV));
-            BaseCode.OutlookBarButton outlookBarButton15 = new BaseCode.OutlookBarButton();
-            BaseCode.OutlookBarButton outlookBarButton16 = new BaseCode.OutlookBarButton();
-            BaseCode.OutlookBarButton outlookBarButton17 = new BaseCode.OutlookBarButton();
-            BaseCode.OutlookBarButton outlookBarButton18 = new BaseCode.OutlookBarButton();
-            BaseCode.OutlookBarButton outlookBarButton19 = new BaseCode.OutlookBarButton();
-            BaseCode.OutlookBarButton outlookBarButton20 = new BaseCode.OutlookBarButton();
-            BaseCode.OutlookBarButton outlookBarButton21 = new BaseCode.OutlookBarButton();
+            BaseCode.OutlookBarButton outlookBarButton22 = new BaseCode.OutlookBarButton();
+            BaseCode.OutlookBarButton outlookBarButton23 = new BaseCode.OutlookBarButton();
+            BaseCode.OutlookBarButton outlookBarButton24 = new BaseCode.OutlookBarButton();
+            BaseCode.OutlookBarButton outlookBarButton25 = new BaseCode.OutlookBarButton();
+            BaseCode.OutlookBarButton outlookBarButton26 = new BaseCode.OutlookBarButton();
+            BaseCode.OutlookBarButton outlookBarButton27 = new BaseCode.OutlookBarButton();
+            BaseCode.OutlookBarButton outlookBarButton28 = new BaseCode.OutlookBarButton();
             this.mnuPrincipal_ = new System.Windows.Forms.MenuStrip();
             this.mnuMantenimientos = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuPrivilegios = new System.Windows.Forms.ToolStripMenuItem();
@@ -44,9 +44,9 @@ namespace SIPV.Main
             this.mnuEntidades = new System.Windows.Forms.ToolStripMenuItem();
             this.mnuIU_TIPO_ENTIDAD = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.clientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.empleadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_IU_CLIENTES = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_IU_PROVEEDORES = new System.Windows.Forms.ToolStripMenuItem();
+            this.mnu_IU_EMPLEADOS = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripSeparator();
             this.artículosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.artículosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -169,9 +169,9 @@ namespace SIPV.Main
             this.mnuEntidades.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.mnuIU_TIPO_ENTIDAD,
             this.toolStripMenuItem2,
-            this.clientesToolStripMenuItem,
-            this.proveedoresToolStripMenuItem,
-            this.empleadosToolStripMenuItem});
+            this.mnu_IU_CLIENTES,
+            this.mnu_IU_PROVEEDORES,
+            this.mnu_IU_EMPLEADOS});
             this.mnuEntidades.Name = "mnuEntidades";
             this.mnuEntidades.Size = new System.Drawing.Size(162, 22);
             this.mnuEntidades.Text = "Entidades";
@@ -188,23 +188,26 @@ namespace SIPV.Main
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(149, 6);
             // 
-            // clientesToolStripMenuItem
+            // mnu_IU_CLIENTES
             // 
-            this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
-            this.clientesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.clientesToolStripMenuItem.Text = "Clientes";
+            this.mnu_IU_CLIENTES.Name = "mnu_IU_CLIENTES";
+            this.mnu_IU_CLIENTES.Size = new System.Drawing.Size(152, 22);
+            this.mnu_IU_CLIENTES.Text = "Clientes";
+            this.mnu_IU_CLIENTES.Click += new System.EventHandler(this.mnu_IU_CLIENTES_Click);
             // 
-            // proveedoresToolStripMenuItem
+            // mnu_IU_PROVEEDORES
             // 
-            this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.proveedoresToolStripMenuItem.Text = "Proveedores";
+            this.mnu_IU_PROVEEDORES.Name = "mnu_IU_PROVEEDORES";
+            this.mnu_IU_PROVEEDORES.Size = new System.Drawing.Size(152, 22);
+            this.mnu_IU_PROVEEDORES.Text = "Proveedores";
+            this.mnu_IU_PROVEEDORES.Click += new System.EventHandler(this.mnu_IU_PROVEEDORES_Click);
             // 
-            // empleadosToolStripMenuItem
+            // mnu_IU_EMPLEADOS
             // 
-            this.empleadosToolStripMenuItem.Name = "empleadosToolStripMenuItem";
-            this.empleadosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.empleadosToolStripMenuItem.Text = "Empleados";
+            this.mnu_IU_EMPLEADOS.Name = "mnu_IU_EMPLEADOS";
+            this.mnu_IU_EMPLEADOS.Size = new System.Drawing.Size(152, 22);
+            this.mnu_IU_EMPLEADOS.Text = "Empleados";
+            this.mnu_IU_EMPLEADOS.Click += new System.EventHandler(this.mnu_IU_EMPLEADOS_Click);
             // 
             // toolStripMenuItem9
             // 
@@ -704,41 +707,41 @@ namespace SIPV.Main
             // 
             this.outlookBar1.BackColor = System.Drawing.SystemColors.Highlight;
             this.outlookBar1.ButtonHeight = 30;
-            outlookBarButton15.Enabled = true;
-            outlookBarButton15.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton15.Image")));
-            outlookBarButton15.Tag = null;
-            outlookBarButton15.Text = "Mantenimientos";
-            outlookBarButton16.Enabled = true;
-            outlookBarButton16.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton16.Image")));
-            outlookBarButton16.Tag = null;
-            outlookBarButton16.Text = "Transacciones";
-            outlookBarButton17.Enabled = true;
-            outlookBarButton17.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton17.Image")));
-            outlookBarButton17.Tag = null;
-            outlookBarButton17.Text = "Procesos";
-            outlookBarButton18.Enabled = true;
-            outlookBarButton18.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton18.Image")));
-            outlookBarButton18.Tag = null;
-            outlookBarButton18.Text = "Reportes";
-            outlookBarButton19.Enabled = true;
-            outlookBarButton19.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton19.Image")));
-            outlookBarButton19.Tag = null;
-            outlookBarButton19.Text = "Consultas";
-            outlookBarButton20.Enabled = true;
-            outlookBarButton20.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton20.Image")));
-            outlookBarButton20.Tag = null;
-            outlookBarButton20.Text = "Utilitarios";
-            outlookBarButton21.Enabled = true;
-            outlookBarButton21.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton21.Image")));
-            outlookBarButton21.Tag = null;
-            outlookBarButton21.Text = "Ayuda";
-            this.outlookBar1.Buttons.Add(outlookBarButton15);
-            this.outlookBar1.Buttons.Add(outlookBarButton16);
-            this.outlookBar1.Buttons.Add(outlookBarButton17);
-            this.outlookBar1.Buttons.Add(outlookBarButton18);
-            this.outlookBar1.Buttons.Add(outlookBarButton19);
-            this.outlookBar1.Buttons.Add(outlookBarButton20);
-            this.outlookBar1.Buttons.Add(outlookBarButton21);
+            outlookBarButton22.Enabled = true;
+            outlookBarButton22.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton22.Image")));
+            outlookBarButton22.Tag = null;
+            outlookBarButton22.Text = "Mantenimientos";
+            outlookBarButton23.Enabled = true;
+            outlookBarButton23.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton23.Image")));
+            outlookBarButton23.Tag = null;
+            outlookBarButton23.Text = "Transacciones";
+            outlookBarButton24.Enabled = true;
+            outlookBarButton24.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton24.Image")));
+            outlookBarButton24.Tag = null;
+            outlookBarButton24.Text = "Procesos";
+            outlookBarButton25.Enabled = true;
+            outlookBarButton25.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton25.Image")));
+            outlookBarButton25.Tag = null;
+            outlookBarButton25.Text = "Reportes";
+            outlookBarButton26.Enabled = true;
+            outlookBarButton26.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton26.Image")));
+            outlookBarButton26.Tag = null;
+            outlookBarButton26.Text = "Consultas";
+            outlookBarButton27.Enabled = true;
+            outlookBarButton27.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton27.Image")));
+            outlookBarButton27.Tag = null;
+            outlookBarButton27.Text = "Utilitarios";
+            outlookBarButton28.Enabled = true;
+            outlookBarButton28.Image = ((System.Drawing.Image)(resources.GetObject("outlookBarButton28.Image")));
+            outlookBarButton28.Tag = null;
+            outlookBarButton28.Text = "Ayuda";
+            this.outlookBar1.Buttons.Add(outlookBarButton22);
+            this.outlookBar1.Buttons.Add(outlookBarButton23);
+            this.outlookBar1.Buttons.Add(outlookBarButton24);
+            this.outlookBar1.Buttons.Add(outlookBarButton25);
+            this.outlookBar1.Buttons.Add(outlookBarButton26);
+            this.outlookBar1.Buttons.Add(outlookBarButton27);
+            this.outlookBar1.Buttons.Add(outlookBarButton28);
             this.outlookBar1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.outlookBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.outlookBar1.Font = new System.Drawing.Font("Verdana", 10F, System.Drawing.FontStyle.Bold);
@@ -874,10 +877,10 @@ namespace SIPV.Main
         private System.Windows.Forms.ToolStripMenuItem formaDePagoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mnuEntidades;
         private System.Windows.Forms.ToolStripMenuItem mnuIU_TIPO_ENTIDAD;
-        private System.Windows.Forms.ToolStripMenuItem clientesToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnu_IU_CLIENTES;
+        private System.Windows.Forms.ToolStripMenuItem mnu_IU_PROVEEDORES;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
-        private System.Windows.Forms.ToolStripMenuItem empleadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnu_IU_EMPLEADOS;
         private System.Windows.Forms.ToolStripMenuItem artículosToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem tiposArtículoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem artículosPorProveedorToolStripMenuItem;
