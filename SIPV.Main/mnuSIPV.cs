@@ -331,6 +331,21 @@ namespace SIPV.Main
 
         #endregion
 
+            private void mnu_IU_CLIENTES_Click(object sender, EventArgs e)
+            {
+                MostrarForma(new SIPV.Windows.Catalogos.IU_ENTIDAD(vDB, this, SIPV.Windows.Catalogos.TipoEntidad.Cliente ));
+            }
+
+            private void mnu_IU_PROVEEDORES_Click(object sender, EventArgs e)
+            {
+                MostrarForma(new SIPV.Windows.Catalogos.IU_ENTIDAD(vDB, this, SIPV.Windows.Catalogos.TipoEntidad.Proveedor ));
+            }
+
+            private void mnu_IU_EMPLEADOS_Click(object sender, EventArgs e)
+            {
+                MostrarForma(new SIPV.Windows.Catalogos.IU_ENTIDAD(vDB, this, SIPV.Windows.Catalogos.TipoEntidad.Empleado ));
+            }
+
    
 
     }
