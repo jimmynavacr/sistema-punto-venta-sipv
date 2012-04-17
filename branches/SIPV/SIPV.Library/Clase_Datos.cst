@@ -1,0 +1,183 @@
+<%-- 
+Name: Table Enum
+Author: Paul Welter
+Update: Jimmy Navarro Castro
+Description: Create an enum of tables.
+--%>
+<%@ CodeTemplate Language="C#" TargetLanguage="C#" Debug="False" Description="Create an enum of tables." %>
+<%@ Property Category="Database" Name="SourceDatabase" Type="SchemaExplorer.DatabaseSchema" Optional="False" Description="Database the table enums will come from." %>
+<%@ Property Name="SourceTable" Type="SchemaExplorer.TableSchema" Category="Context" Description="Table that the object is based on." %>
+<%@ Map Name="CSharpAlias" Src="System-CSharpAlias" Description="System to C# Type Map" %>
+<%@ Assembly Name="SchemaExplorer" %>
+<%@ Import Namespace="SchemaExplorer" %>
+using System;
+using System.Collections.Generic;
+using System.Text;
+using BaseCode;
+using System.ComponentModel;
+using System.Reflection;
+using System.Drawing.Design;
+using System.Windows.Forms.Design;
+
+<%-- namespace Gestion_TI.Datos--%>
+namespace SIPV.Datos
+{
+
+<%--for(int x = 0; x < SourceDatabase.Tables.Count; x++) 
+{ 
+  TableSchema table = SourceDatabase.Tables[x]; 
+--%>
+  <%TableSchema table = SourceTable; %>
+
+    public class Combo<%= table.Name.ToUpper() %>  : StringConverter
+    {
+        private static string[] m<%= table.Name.ToUpper() %>;
+        public static bool Cargado = false;
+        public override bool GetStandardValuesSupported(ITypeDescriptorContext context)
+        {
+            return true;
+        }
+        public static string[] <%= table.Name.ToUpper() %>
+        {
+            get { return m<%= table.Name.ToUpper() %>; }
+            set { m<%= table.Name.ToUpper() %>= value; Cargado = true; }
+        }
+        public override StandardValuesCollection GetStandardValues(ITypeDescriptorContext context)
+        {
+            return new StandardValuesCollection(m<%= table.Name.ToUpper() %>);
+        }
+        public override bool GetStandardValuesExclusive(ITypeDescriptorContext context)
+        {
+            return true;
+        }
+
+    }
+	
+	public class Consulta<%= table.Name.ToUpper() %> : UITypeEditor
+    {
+        public override UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext context)
+        {
+            return UITypeEditorEditStyle.Modal;
+        }
+        public override object EditValue(ITypeDescriptorContext context, IServiceProvider provider, object value)
+        {
+            System.Windows.Forms.TextBox vTextCampoLlave = new System.Windows.Forms.TextBox();
+
+            IWindowsFormsEditorService svc = (IWindowsFormsEditorService)
+                provider.GetService(typeof(IWindowsFormsEditorService));
+            if (svc != null)
+            {
+                frmConsulta FormConsulta = default(frmConsulta);
+                if (value == null)
+                {
+                    value = "0";
+                }
+                vTextCampoLlave.Text = value.ToString();
+
+                FormConsulta = new frmConsulta(((IvDB)context.Instance).getvDB(),
+                                                 null,
+                                                 "Consulta de <%= table.Name %>",
+                                                 "SELECT <%= table.Name.ToUpper() %>,DESCRIPCION FROM <%= table.Name.ToUpper() %>",
+                                                 vTextCampoLlave, 0, null,
+                                                 new string[] { "ID", "DESCRIPCION" },
+                                                 new int[] { 100, 300});
+
+
+                svc.ShowDialog(FormConsulta);
+                value = vTextCampoLlave.Text;
+            }
+            return value;
+        }
+    }
+	
+
+  public class <%= table.Name.ToUpper() %> : BaseCode.DB_BASE, IvDB
+  {
+		public BaseCode.DB getvDB() { return DB; }
+		#region Constructores
+			public <%= table.Name.ToUpper() %>()
+			{
+				
+			}
+			public <%= table.Name.ToUpper() %>(BaseCode.DB vDB)
+					: base(vDB,"<%= table.Name.ToUpper() %>", TipoInterAccionBD.Directa)
+			{
+					this.Compania = "dbo";
+					this.CrearEstructura();
+					this.InicializarCampos();
+			}
+		#endregion
+	
+		#region Variables Locales
+	<%for (int y = 0; y < table.Columns.Count; y++) {
+		 ColumnSchema column=table. Columns[y];
+		 %>  			
+			private <%= CSharpAlias[column.SystemType.FullName] %> _<%= column.Name.ToUpper() %>;
+    <%}%>	 
+		#endregion
+		
+		#region Propiedades Originales	
+	<%for (int y = 0; y < table.Columns.Count; y++) {
+		 ColumnSchema column=table. Columns[y];
+		 %>  			
+			[Browsable(false)]
+			public <%= CSharpAlias[column.SystemType.FullName] %> <%= column.Name.ToUpper().Substring(0,1) +  column.Name.ToLower().Substring(1,column.Name.Length -1)   %>
+			{
+					get { return _<%= column.Name.ToUpper() %>; }
+					set { _<%= column.Name.ToUpper() %> = value; }
+			}
+    <%}%>
+		#endregion
+	
+		#region Propiedades a Mostrar	
+	<%for (int y = 0; y < table.Columns.Count; y++) {
+		 ColumnSchema column=table. Columns[y];
+		 %>  			
+			[Browsable(true)]
+			//[TypeConverter(typeof(Combo))] 
+			//[Editor(typeof(Consulta), typeof(UITypeEditor))]
+			[CategoryAttribute("General"), DisplayName("<%= y.ToString() + "-" + column.Name.ToUpper().Substring(0,1) +  column.Name.ToLower().Substring(1,column.Name.Length -1) %>"), DescriptionAttribute("Valor de <%= column.Name.ToUpper().Substring(0,1) +  column.Name.ToLower().Substring(1,column.Name.Length -1) %>"), ReadOnly(false)]                
+			
+			public <%= CSharpAlias[column.SystemType.FullName] %> _m<%= column.Name.ToUpper() %>
+			{
+					get { return <%= column.Name.ToUpper().Substring(0,1) +  column.Name.ToLower().Substring(1,column.Name.Length -1)  %>; }
+					set {<%=column.Name.ToUpper().Substring(0,1) +  column.Name.ToLower().Substring(1,column.Name.Length -1) %> = value; }
+			}
+    <%}%>
+		#endregion
+	
+		
+			public override string Validar()
+			{
+	
+				<%for (int y = 0; y < table.Columns.Count; y++) {
+					ColumnSchema column=table. Columns[y];
+					%>  			
+					if (this.EsValorInvalido(_<%= column.Name.ToUpper() %>))  { return "Falta el dato de <%= column.Name.ToLower() %>"; }
+				<%}%>		
+				    return "";
+			}
+			public override void InicializarCampos()
+			{
+				<%for (int y = 0; y < table.Columns.Count; y++) {
+					ColumnSchema column=table. Columns[y];
+					%>  			
+					<%if (column.SystemType.FullName.Equals("System.String")) {%>
+					_<%= column.Name.ToUpper() %>=""; 
+					<%} else 
+					     { 
+							if (column.SystemType.FullName.Equals("System.DateTime")) {%>
+				    _<%=  column.Name.ToUpper() %>=System.DateTime.Today; 
+					      <%} else{%>
+				    _<%=  column.Name.ToUpper() %>=0; 
+  					    <%}%>
+					<%}%>
+				<%}%>			
+				    Lista = null;
+			}    		
+  }
+<%--}--%>	
+}
+
+
+

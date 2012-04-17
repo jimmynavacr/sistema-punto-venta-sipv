@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ENTIDAD.cs" />
     <Compile Include="General\COLECTION_EDITOR.cs">
       <SubType>Form</SubType>
     </Compile>
