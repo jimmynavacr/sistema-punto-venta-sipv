@@ -314,7 +314,7 @@ namespace SIPV.Main
 
             private void mnuDiccionarioDatos_Click(object sender, EventArgs e)
             {
-                Utility.VerReporte("", "VisDiccionarioDatos", "Diccionario de Datos", new SIPV.Windows.Reportes.DsReportes(), new SIPV.Windows.Reportes.RPT_Diccionario_Datos(), vDB, this, null);
+                
             }
 
             #endregion
@@ -344,6 +344,11 @@ namespace SIPV.Main
             private void mnu_IU_EMPLEADOS_Click(object sender, EventArgs e)
             {
                 MostrarForma(new SIPV.Windows.Catalogos.IU_ENTIDAD(vDB, this, SIPV.Windows.Catalogos.TipoEntidad.Empleado ));
+            }
+
+            private void mnuIU_REPORTE_DICCIONARIO_DATOS_Click(object sender, EventArgs e)
+            {
+                Utility.VerReporte("", "VisDiccionarioDatos", "Diccionario de Datos", new SIPV.Windows.Reportes.DsReportes(), new SIPV.Windows.Reportes.RPT_Diccionario_Datos(), vDB, this, null);
             }
 
    
