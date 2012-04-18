@@ -163,6 +163,7 @@ namespace SIPV.Security
             // 
             this.TbClave.Location = new System.Drawing.Point(168, 64);
             this.TbClave.Name = "TbClave";
+            this.TbClave.PasswordChar = '*';
             this.TbClave.Size = new System.Drawing.Size(116, 20);
             this.TbClave.TabIndex = 1;
             this.TbClave.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TbClaveKeyDownEvent);
@@ -172,7 +173,7 @@ namespace SIPV.Security
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(304, 177);
+            this.ClientSize = new System.Drawing.Size(452, 279);
             this.ControlBox = false;
             this.Controls.Add(this.TbClave);
             this.Controls.Add(this.TbUsuario);
