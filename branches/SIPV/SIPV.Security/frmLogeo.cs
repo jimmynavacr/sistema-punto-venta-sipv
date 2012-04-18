@@ -87,11 +87,11 @@ namespace SIPV.Security
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(43, 32);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(323, 107);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 13);
+            this.label1.Size = new System.Drawing.Size(134, 18);
             this.label1.TabIndex = 7;
             this.label1.Text = "Nombre &usuario:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -100,11 +100,11 @@ namespace SIPV.Security
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label2.Location = new System.Drawing.Point(43, 68);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(323, 146);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(75, 13);
+            this.label2.Size = new System.Drawing.Size(115, 18);
             this.label2.TabIndex = 9;
             this.label2.Text = "&Clave acceso:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -127,33 +127,39 @@ namespace SIPV.Security
             // 
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(105, 148);
+            this.label4.Location = new System.Drawing.Point(243, 283);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(87, 19);
             this.label4.TabIndex = 15;
-            this.label4.Text = "Copyrigth 2010";
+            this.label4.Text = "Copyrigth 2012";
             // 
             // CmdIngresar
             // 
-            this.CmdIngresar.Location = new System.Drawing.Point(46, 107);
+            this.CmdIngresar.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.CmdIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CmdIngresar.Location = new System.Drawing.Point(322, 203);
             this.CmdIngresar.Name = "CmdIngresar";
             this.CmdIngresar.Size = new System.Drawing.Size(116, 28);
             this.CmdIngresar.TabIndex = 2;
             this.CmdIngresar.Text = "Iniciar Sesión";
+            this.CmdIngresar.UseVisualStyleBackColor = false;
             this.CmdIngresar.Click += new System.EventHandler(this.cmdIngresar_Click);
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(168, 107);
+            this.simpleButton1.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.simpleButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.simpleButton1.Location = new System.Drawing.Point(455, 203);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(116, 28);
             this.simpleButton1.TabIndex = 3;
             this.simpleButton1.Text = "Salir";
+            this.simpleButton1.UseVisualStyleBackColor = false;
             this.simpleButton1.Click += new System.EventHandler(this.CmdSalir_Click);
             // 
             // TbUsuario
             // 
-            this.TbUsuario.Location = new System.Drawing.Point(168, 28);
+            this.TbUsuario.Location = new System.Drawing.Point(455, 108);
             this.TbUsuario.Name = "TbUsuario";
             this.TbUsuario.Size = new System.Drawing.Size(116, 20);
             this.TbUsuario.TabIndex = 0;
@@ -161,7 +167,7 @@ namespace SIPV.Security
             // 
             // TbClave
             // 
-            this.TbClave.Location = new System.Drawing.Point(168, 64);
+            this.TbClave.Location = new System.Drawing.Point(455, 147);
             this.TbClave.Name = "TbClave";
             this.TbClave.PasswordChar = '*';
             this.TbClave.Size = new System.Drawing.Size(116, 20);
@@ -173,7 +179,8 @@ namespace SIPV.Security
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(452, 279);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(581, 299);
             this.ControlBox = false;
             this.Controls.Add(this.TbClave);
             this.Controls.Add(this.TbUsuario);
@@ -187,8 +194,8 @@ namespace SIPV.Security
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmLogeo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Sistema de Gestión Tecnológica y Administrativa ";
-            this.TransparencyKey = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.Text = "Sistema de Punto de Venta";
+            this.TransparencyKey = System.Drawing.Color.Silver;
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmLogeo_MouseDown);
             this.ResumeLayout(false);
             this.PerformLayout();
