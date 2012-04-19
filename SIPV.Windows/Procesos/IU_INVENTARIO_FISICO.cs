@@ -35,7 +35,7 @@ namespace SIPV.Windows.Procesos
 
         public override void ConfigurarConsulta()
         {
-            this.SqlQueryMant = "SELECT ID_INVENTARIO ,DESCRIPCION FROM INVENTARIO_FISICO";
+            this.SqlQueryMant = "SELECT ID_INVENTARIO ,RESPONSABLE FROM INVENTARIO_FISICO";
             this.Enc = new string[] { "ID", "DESCRIPCION" };
             this.Anch = new int[] { 100, 300 };
             this.ConfigurarConsulta(SqlQueryMant, Enc, Anch);

@@ -197,23 +197,24 @@ namespace SIPV.Datos
             set { Email = value; }
         }
         [Browsable(true)]
-        [TypeConverter(typeof(ComboTIPO_ENTIDAD))] 
+        [TypeConverter(typeof(ComboTIPO_ENTIDAD))]
         //[Editor(typeof(Consulta), typeof(UITypeEditor))]
         [CategoryAttribute("General"), DisplayName("5-Tipo entidad"), DescriptionAttribute("Tipo Entidad"), ReadOnly(true)]
 
         public string _mTIPO_ENTIDAD
         {
             get { return _TIPO_ENTIDAD_DESCRIPCION; }
-            set { 
-            if (value.Length >= 2)
+            set
             {
-                Tipo_entidad = value.Substring(0, 2);
-            }
-            else
-            {
-                Tipo_entidad = "00";
-            }
-            
+                if (value.Length >= 2)
+                {
+                    Tipo_entidad = value.Substring(0, 2);
+                }
+                else
+                {
+                    Tipo_entidad = "00";
+                }
+
             }
         }
         #endregion
