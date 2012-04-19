@@ -50,7 +50,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABONO_APARTADO.cs" />
+    <Compile Include="APARTADO.cs" />
+    <Compile Include="ARTICULO.cs" />
+    <Compile Include="COMPRA.cs" />
+    <Compile Include="COMPRA_DETALLE.cs" />
     <Compile Include="ENTIDAD.cs" />
+    <Compile Include="FORMA_PAGO.cs" />
     <Compile Include="General\COLECTION_EDITOR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,6 +64,10 @@
       <DependentUpon>COLECTION_EDITOR.cs</DependentUpon>
     </Compile>
     <Compile Include="Activo.ti\ESTADO_ACTIVO.cs" />
+    <Compile Include="GESTION_SOLICITUD.cs" />
+    <Compile Include="INVENTARIO_FISICO.cs" />
+    <Compile Include="INVENTARIO_FISICO_DETALLE.cs" />
+    <Compile Include="MOVIMIENTO_ARTICULO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="General\COLECTION_EDITOR.resx">
       <DependentUpon>COLECTION_EDITOR.cs</DependentUpon>
@@ -78,7 +88,16 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="PROVEEDOR_ARTICULO.cs" />
+    <Compile Include="REPARACION.cs" />
+    <Compile Include="REPARACION_DETALLE.cs" />
+    <Compile Include="SOLICITUD.cs" />
+    <Compile Include="TIPO_ARTICULO.cs" />
     <Compile Include="TIPO_ENTIDAD.cs" />
+    <Compile Include="TIPO_GESTION.cs" />
+    <Compile Include="TIPO_MOVIMIENTO.cs" />
+    <Compile Include="VENTA.cs" />
+    <Compile Include="VENTA_DETALLE.cs" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
