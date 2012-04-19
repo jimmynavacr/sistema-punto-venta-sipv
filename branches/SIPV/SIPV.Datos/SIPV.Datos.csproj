@@ -53,8 +53,8 @@
     <Compile Include="ABONO_APARTADO.cs" />
     <Compile Include="APARTADO.cs" />
     <Compile Include="ARTICULO.cs" />
-    <Compile Include="COMPRA.cs" />
-    <Compile Include="COMPRA_DETALLE.cs" />
+    <Compile Include="Compra\COMPRA.cs" />
+    <Compile Include="Compra\COMPRA_DETALLE.cs" />
     <Compile Include="ENTIDAD.cs" />
     <Compile Include="FORMA_PAGO.cs" />
     <Compile Include="General\COLECTION_EDITOR.cs">
@@ -65,8 +65,8 @@
     </Compile>
     <Compile Include="Activo.ti\ESTADO_ACTIVO.cs" />
     <Compile Include="GESTION_SOLICITUD.cs" />
-    <Compile Include="INVENTARIO_FISICO.cs" />
-    <Compile Include="INVENTARIO_FISICO_DETALLE.cs" />
+    <Compile Include="Inventario\INVENTARIO_FISICO.cs" />
+    <Compile Include="Inventario\INVENTARIO_FISICO_DETALLE.cs" />
     <Compile Include="MOVIMIENTO_ARTICULO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="General\COLECTION_EDITOR.resx">
@@ -96,8 +96,8 @@
     <Compile Include="TIPO_ENTIDAD.cs" />
     <Compile Include="TIPO_GESTION.cs" />
     <Compile Include="TIPO_MOVIMIENTO.cs" />
-    <Compile Include="VENTA.cs" />
-    <Compile Include="VENTA_DETALLE.cs" />
+    <Compile Include="Venta\VENTA.cs" />
+    <Compile Include="Venta\VENTA_DETALLE.cs" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -126,6 +126,9 @@
       <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Apartado\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

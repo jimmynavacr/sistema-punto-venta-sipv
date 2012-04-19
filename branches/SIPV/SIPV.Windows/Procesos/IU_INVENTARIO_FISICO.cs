@@ -8,19 +8,19 @@ using System.Drawing.Design;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
 
-namespace SIPV.Windows.Catalogos
+namespace SIPV.Windows.Procesos
 {
     
 
 
 
-    public partial class IU_TIPO_ENTIDAD : BaseCode.frmBaseMant_Grid_DataObj
+    public partial class IU_INVENTARIO_FISICO : BaseCode.frmBaseMant_Grid_DataObj
     {
         #region Constructores
 
-        public IU_TIPO_ENTIDAD(BaseCode.DB vDB, Form Parent)
+        public IU_INVENTARIO_FISICO(BaseCode.DB vDB, Form Parent)
             :
-            base(vDB, Parent, new SIPV.Datos.TIPO_ENTIDAD(vDB))
+            base(vDB, Parent, new SIPV.Datos.INVENTARIO_FISICO(vDB))
         {
             InitializeComponent();
             Campos.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.Campos_PropertyValueChanged);
@@ -35,7 +35,7 @@ namespace SIPV.Windows.Catalogos
 
         public override void ConfigurarConsulta()
         {
-            this.SqlQueryMant = "SELECT TIPO_ENTIDAD ,DESCRIPCION FROM TIPO_ENTIDAD";
+            this.SqlQueryMant = "SELECT ID_INVENTARIO ,DESCRIPCION FROM INVENTARIO_FISICO";
             this.Enc = new string[] { "ID", "DESCRIPCION" };
             this.Anch = new int[] { 100, 300 };
             this.ConfigurarConsulta(SqlQueryMant, Enc, Anch);
@@ -43,16 +43,16 @@ namespace SIPV.Windows.Catalogos
 
         private void Campos_PropertyValueChanged(object s, PropertyValueChangedEventArgs e)
         {
-            TextCampoLlave.Text = ((SIPV.Datos.TIPO_ENTIDAD)TablaBase).Tipo_entidad ;
+            TextCampoLlave.Text = ((SIPV.Datos.INVENTARIO_FISICO)TablaBase).Id_inventario;
         }
         public override void CargarObjsDeDatosDesdeObjsDeInterfaces()
         {
 
-            ((SIPV.Datos.TIPO_ENTIDAD)TablaBase).Tipo_entidad = TextCampoLlave.Text;
+            ((SIPV.Datos.INVENTARIO_FISICO)TablaBase).Id_inventario = TextCampoLlave.Text;
         }
-        private void IU_TIPO_ENTIDAD_AntesDatoEnviado(object sender, EventArgs e)
+        private void IU_INVENTARIO_FISICO_AntesDatoEnviado(object sender, EventArgs e)
         {
-            ((SIPV.Datos.TIPO_ENTIDAD)TablaBase).Tipo_entidad = DataGrid.DataGrid.Rows[DataGrid.DataGrid.CurrentCell.RowIndex].Cells[0].Value.ToString(); ;
+            ((SIPV.Datos.INVENTARIO_FISICO)TablaBase).Id_inventario = DataGrid.DataGrid.Rows[DataGrid.DataGrid.CurrentCell.RowIndex].Cells[0].Value.ToString(); ;
         }
     }
 }
