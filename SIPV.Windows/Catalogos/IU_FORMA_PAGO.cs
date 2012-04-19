@@ -14,13 +14,13 @@ namespace SIPV.Windows.Catalogos
 
 
 
-    public partial class IU_TIPO_ENTIDAD : BaseCode.frmBaseMant_Grid_DataObj
+    public partial class IU_FORMA_PAGO : BaseCode.frmBaseMant_Grid_DataObj
     {
         #region Constructores
 
-        public IU_TIPO_ENTIDAD(BaseCode.DB vDB, Form Parent)
+        public IU_FORMA_PAGO(BaseCode.DB vDB, Form Parent)
             :
-            base(vDB, Parent, new SIPV.Datos.TIPO_ENTIDAD(vDB))
+            base(vDB, Parent, new SIPV.Datos.FORMA_PAGO(vDB))
         {
             InitializeComponent();
             Campos.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.Campos_PropertyValueChanged);
@@ -35,7 +35,7 @@ namespace SIPV.Windows.Catalogos
 
         public override void ConfigurarConsulta()
         {
-            this.SqlQueryMant = "SELECT TIPO_ENTIDAD ,DESCRIPCION FROM TIPO_ENTIDAD";
+            this.SqlQueryMant = "SELECT FORMA_PAGO ,DESCRIPCION FROM FORMA_PAGO";
             this.Enc = new string[] { "ID", "DESCRIPCION" };
             this.Anch = new int[] { 100, 300 };
             this.ConfigurarConsulta(SqlQueryMant, Enc, Anch);
@@ -43,16 +43,16 @@ namespace SIPV.Windows.Catalogos
 
         private void Campos_PropertyValueChanged(object s, PropertyValueChangedEventArgs e)
         {
-            TextCampoLlave.Text = ((SIPV.Datos.TIPO_ENTIDAD)TablaBase).Tipo_entidad ;
+            TextCampoLlave.Text = ((SIPV.Datos.FORMA_PAGO)TablaBase).Forma_pago;
         }
         public override void CargarObjsDeDatosDesdeObjsDeInterfaces()
         {
 
-            ((SIPV.Datos.TIPO_ENTIDAD)TablaBase).Tipo_entidad = TextCampoLlave.Text;
+            ((SIPV.Datos.FORMA_PAGO)TablaBase).Forma_pago = TextCampoLlave.Text;
         }
-        private void IU_TIPO_ENTIDAD_AntesDatoEnviado(object sender, EventArgs e)
+        private void IU_FORMA_PAGO_AntesDatoEnviado(object sender, EventArgs e)
         {
-            ((SIPV.Datos.TIPO_ENTIDAD)TablaBase).Tipo_entidad = DataGrid.DataGrid.Rows[DataGrid.DataGrid.CurrentCell.RowIndex].Cells[0].Value.ToString(); ;
+            ((SIPV.Datos.FORMA_PAGO)TablaBase).Forma_pago = DataGrid.DataGrid.Rows[DataGrid.DataGrid.CurrentCell.RowIndex].Cells[0].Value.ToString(); ;
         }
     }
 }
