@@ -303,6 +303,11 @@ namespace SIPV.Main
             {
                 MostrarForma(new SIPV.Windows.Catalogos.IU_PROVEEDOR_ARTICULO(vDB, this));
             }
+
+            private void mnuIU_FORMAS_PAGO_Click(object sender, EventArgs e)
+            {
+                MostrarForma(new SIPV.Windows.Catalogos.IU_FORMA_PAGO(vDB, this));
+            }
             #endregion
 
             #region Transacciones
@@ -310,32 +315,32 @@ namespace SIPV.Main
            
             private void mnuIU_COMPRA_Click(object sender, EventArgs e)
             {
-                MostrarForma(new SIPV.Windows.Catalogos.IU_PROVEEDOR_ARTICULO(vDB, this));
+                MostrarForma(new SIPV.Windows.Transacciones .IU_COMPRA(vDB, this));
             }
 
             private void mnuIU_VENTA_Click(object sender, EventArgs e)
             {
-                MostrarForma(new SIPV.Windows.Catalogos.IU_PROVEEDOR_ARTICULO(vDB, this));
+                MostrarForma(new SIPV.Windows.Transacciones.IU_VENTA(vDB, this));
             }
 
             private void mnuIU_SOLICITUD_Click(object sender, EventArgs e)
             {
-                MostrarForma(new SIPV.Windows.Catalogos.IU_PROVEEDOR_ARTICULO(vDB, this));
+                MostrarForma(new SIPV.Windows.Transacciones.IU_SOLICITUD(vDB, this));
             }
 
             private void mnuIU_APARTADO_Click(object sender, EventArgs e)
             {
-                MostrarForma(new SIPV.Windows.Catalogos.IU_PROVEEDOR_ARTICULO(vDB, this));
+                MostrarForma(new SIPV.Windows.Transacciones.IU_APARTADO(vDB, this));
             }
 
             private void mnuIU_AJUSTE_Click(object sender, EventArgs e)
             {
-                MostrarForma(new SIPV.Windows.Catalogos.IU_PROVEEDOR_ARTICULO(vDB, this));
+                MostrarForma(new SIPV.Windows.Transacciones.IU_AJUSTE(vDB, this));
             }
 
             private void mnuIU_REPARACION_Click(object sender, EventArgs e)
             {
-                MostrarForma(new SIPV.Windows.Catalogos.IU_PROVEEDOR_ARTICULO(vDB, this));
+                MostrarForma(new SIPV.Windows.Transacciones.IU_REPARACION(vDB, this));
             }
             #endregion
 
@@ -461,6 +466,8 @@ namespace SIPV.Main
             {
                 MostrarForma(new SIPV.Windows.Procesos.IU_INVENTARIO_FISICO (vDB, this));
             }
+
+      
 
         #region Procesos
 

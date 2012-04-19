@@ -35,7 +35,7 @@ namespace SIPV.Windows.Transacciones
 
         public override void ConfigurarConsulta()
         {
-            this.SqlQueryMant = "SELECT SOLICITUD ,DESCRIPCION FROM SOLICITUD";
+            this.SqlQueryMant = "SELECT SOLICITUD ,CLIENTE FROM SOLICITUD";
             this.Enc = new string[] { "ID", "DESCRIPCION" };
             this.Anch = new int[] { 100, 300 };
             this.ConfigurarConsulta(SqlQueryMant, Enc, Anch);
