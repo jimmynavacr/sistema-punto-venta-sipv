@@ -83,17 +83,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Catalogos\IU_ARTICULO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\IU_ARTICULO.Designer.cs">
+      <DependentUpon>IU_ARTICULO.cs</DependentUpon>
+    </Compile>
     <Compile Include="Catalogos\IU_ENTIDAD.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Catalogos\IU_ENTIDAD.Designer.cs">
       <DependentUpon>IU_ENTIDAD.cs</DependentUpon>
     </Compile>
-    <Compile Include="Catalogos\Form1.cs">
+    <Compile Include="Catalogos\IU_FORMA_PAGO.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Catalogos\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Catalogos\IU_FORMA_PAGO.Designer.cs">
+      <DependentUpon>IU_FORMA_PAGO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\IU_PROVEEDOR_ARTICULO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\IU_PROVEEDOR_ARTICULO.Designer.cs">
+      <DependentUpon>IU_PROVEEDOR_ARTICULO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogos\IU_TIPO_ARTICULO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogos\IU_TIPO_ARTICULO.Designer.cs">
+      <DependentUpon>IU_TIPO_ARTICULO.cs</DependentUpon>
     </Compile>
     <Compile Include="Catalogos\IU_TIPO_ENTIDAD.cs">
       <SubType>Form</SubType>
@@ -107,6 +125,12 @@
     <Compile Include="frmAcerca.designer.cs">
       <DependentUpon>frmAcerca.cs</DependentUpon>
     </Compile>
+    <Compile Include="Procesos\IU_INVENTARIO_FISICO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Procesos\IU_INVENTARIO_FISICO.Designer.cs">
+      <DependentUpon>IU_INVENTARIO_FISICO.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\DsReportes.cs">
       <DependentUpon>DsReportes.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -118,8 +142,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Catalogos\IU_ARTICULO.resx">
+      <DependentUpon>IU_ARTICULO.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\IU_ENTIDAD.resx">
       <DependentUpon>IU_ENTIDAD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\IU_FORMA_PAGO.resx">
+      <DependentUpon>IU_FORMA_PAGO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\IU_PROVEEDOR_ARTICULO.resx">
+      <DependentUpon>IU_PROVEEDOR_ARTICULO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogos\IU_TIPO_ARTICULO.resx">
+      <DependentUpon>IU_TIPO_ARTICULO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Catalogos\IU_TIPO_ENTIDAD.resx">
       <DependentUpon>IU_TIPO_ENTIDAD.cs</DependentUpon>
@@ -127,6 +163,9 @@
     <EmbeddedResource Include="frmAcerca.resx">
       <DependentUpon>frmAcerca.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Procesos\IU_INVENTARIO_FISICO.resx">
+      <DependentUpon>IU_INVENTARIO_FISICO.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -136,6 +175,24 @@
     <EmbeddedResource Include="Reportes\RPT_Diccionario_Datos.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RPT_Diccionario_Datos1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transacciones\IU_AJUSTE.resx">
+      <DependentUpon>IU_AJUSTE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transacciones\IU_APARTADO.resx">
+      <DependentUpon>IU_APARTADO.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transacciones\IU_COMPRA.resx">
+      <DependentUpon>IU_COMPRA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transacciones\IU_REPARACION.resx">
+      <DependentUpon>IU_REPARACION.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transacciones\IU_SOLICITUD.resx">
+      <DependentUpon>IU_SOLICITUD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transacciones\IU_VENTA.resx">
+      <DependentUpon>IU_VENTA.cs</DependentUpon>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -168,6 +225,42 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RPT_Diccionario_Datos.rpt</DependentUpon>
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Transacciones\IU_AJUSTE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transacciones\IU_AJUSTE.Designer.cs">
+      <DependentUpon>IU_AJUSTE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transacciones\IU_APARTADO.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transacciones\IU_APARTADO.Designer.cs">
+      <DependentUpon>IU_APARTADO.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transacciones\IU_COMPRA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transacciones\IU_COMPRA.Designer.cs">
+      <DependentUpon>IU_COMPRA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transacciones\IU_REPARACION.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transacciones\IU_REPARACION.Designer.cs">
+      <DependentUpon>IU_REPARACION.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transacciones\IU_SOLICITUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transacciones\IU_SOLICITUD.Designer.cs">
+      <DependentUpon>IU_SOLICITUD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transacciones\IU_VENTA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transacciones\IU_VENTA.Designer.cs">
+      <DependentUpon>IU_VENTA.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -268,8 +361,6 @@
   <ItemGroup>
     <Folder Include="Componentes\" />
     <Folder Include="Consultas\" />
-    <Folder Include="Procesos\" />
-    <Folder Include="Transacciones\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

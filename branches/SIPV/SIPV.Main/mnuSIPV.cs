@@ -60,6 +60,7 @@ namespace SIPV.Main
         {
             return this;
         }
+
         #region Persistencia Estado Barra LAteral
    
         //A=Auto-Hide
@@ -246,91 +247,28 @@ namespace SIPV.Main
         }
         #endregion
 
-
         
         #region Opciones Menu
         
-            #region Ayuda
-            private void mnuAcerca_Click(object sender, EventArgs e)
-            {
-                (new SIPV.Windows.frmAcerca()).Show ();
-            }
-
-            private void mnuTemasAyuda_Click(object sender, EventArgs e)
-            {
-                try
-                {
-                    string kdna = System.AppDomain.CurrentDomain.BaseDirectory + "/Ayuda.chm";
-                    Help.ShowHelp(this, kdna);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error de tipo: " + ex.Message);
-                }
-            }
-
-            #endregion
-            
-            #region Utilitarios
-            private void mnuCambioClave_Click(object sender, EventArgs e)
-            {
-                MostrarForma(new SIPV.Security.frmCambioClave(vDB));
-            }
-
-            private void gestiónAuditoríaToolStripMenuItem_Click(object sender, EventArgs e)
-            {
-                
-            }
-
-
-            #endregion
-           
-            #region Catalogos 
-
-            private void mnuPrivilegios_Click(object sender, EventArgs e)
-            {
-                MostrarForma(new SIPV.Security.frmPrivilegiosMnu(this, vDB));
-            }
-
-            #endregion        
-            
-            #region Transacciones
-            
-            
-            
-            #endregion
-
-            #region Consultas
-
-            #endregion
-
-            #region Procesos
-
-
-            
-            #endregion
-
-            #region Reportes
-
-            private void mnuDiccionarioDatos_Click(object sender, EventArgs e)
-            {
-                
-            }
-
-            #endregion
+     
+        
 
             private void mnuIU_TIPO_ENTIDAD_Click(object sender, EventArgs e)
             {
                 MostrarForma(new SIPV.Windows.Catalogos.IU_TIPO_ENTIDAD(vDB,this));
             }
 
+       
 
+            #region Catalogos
 
+            private void mnuPrivilegios_Click(object sender, EventArgs e)
+            {
+                MostrarForma(new SIPV.Security.frmPrivilegiosMnu(this, vDB));
+            }
 
-
-
-        #endregion
-
+                 
+            
             private void mnu_IU_CLIENTES_Click(object sender, EventArgs e)
             {
                 MostrarForma(new SIPV.Windows.Catalogos.IU_ENTIDAD(vDB, this, SIPV.Windows.Catalogos.TipoEntidad.Cliente ));
@@ -351,7 +289,188 @@ namespace SIPV.Main
                 Utility.VerReporte("", "VisDiccionarioDatos", "Diccionario de Datos", new SIPV.Windows.Reportes.DsReportes(), new SIPV.Windows.Reportes.RPT_Diccionario_Datos(), vDB, this, null);
             }
 
-   
+            private void mnuIU_ARTICULO_Click(object sender, EventArgs e)
+            {
+                MostrarForma(new SIPV.Windows.Catalogos.IU_ARTICULO (vDB, this));
+            }
+
+            private void mnuIU_TIPOS_ARTICULO_Click(object sender, EventArgs e)
+            {
+                MostrarForma(new SIPV.Windows.Catalogos.IU_TIPO_ARTICULO(vDB, this));
+            }
+
+            private void mnuIU_ARTICULOS_PROVEEDOR_Click(object sender, EventArgs e)
+            {
+                MostrarForma(new SIPV.Windows.Catalogos.IU_PROVEEDOR_ARTICULO(vDB, this));
+            }
+            #endregion
+
+            #region Transacciones
+
+           
+            private void mnuIU_COMPRA_Click(object sender, EventArgs e)
+            {
+                MostrarForma(new SIPV.Windows.Catalogos.IU_PROVEEDOR_ARTICULO(vDB, this));
+            }
+
+            private void mnuIU_VENTA_Click(object sender, EventArgs e)
+            {
+                MostrarForma(new SIPV.Windows.Catalogos.IU_PROVEEDOR_ARTICULO(vDB, this));
+            }
+
+            private void mnuIU_SOLICITUD_Click(object sender, EventArgs e)
+            {
+                MostrarForma(new SIPV.Windows.Catalogos.IU_PROVEEDOR_ARTICULO(vDB, this));
+            }
+
+            private void mnuIU_APARTADO_Click(object sender, EventArgs e)
+            {
+                MostrarForma(new SIPV.Windows.Catalogos.IU_PROVEEDOR_ARTICULO(vDB, this));
+            }
+
+            private void mnuIU_AJUSTE_Click(object sender, EventArgs e)
+            {
+                MostrarForma(new SIPV.Windows.Catalogos.IU_PROVEEDOR_ARTICULO(vDB, this));
+            }
+
+            private void mnuIU_REPARACION_Click(object sender, EventArgs e)
+            {
+                MostrarForma(new SIPV.Windows.Catalogos.IU_PROVEEDOR_ARTICULO(vDB, this));
+            }
+            #endregion
+
+
+            #region Reportes
+
+            private void mnuDiccionarioDatos_Click(object sender, EventArgs e)
+            {
+
+            }
+
+           
+            private void mnuIU_REPORTE_USUARIOS_GRUPO_Click(object sender, EventArgs e)
+            {
+
+            }
+
+            private void mnuIU_REPORTE_PERMISOS_GRUPO_Click(object sender, EventArgs e)
+            {
+
+            }
+
+            private void mnuIU_REPORTE_INVENTARIO_Click(object sender, EventArgs e)
+            {
+
+            }
+
+            private void mnuIU_REPORTE_COMPRAS_Click(object sender, EventArgs e)
+            {
+
+            }
+
+            private void mnuIU_REPORTE_VENTAS_Click(object sender, EventArgs e)
+            {
+
+            }
+
+            private void mnuIU_REPORTE_APARTADOS_Click(object sender, EventArgs e)
+            {
+
+            }
+
+            private void mnuIU_REPORTE_SOLICITUDES_Click(object sender, EventArgs e)
+            {
+
+            }
+
+            private void mnuIU_REPORTE_REPARACIONES_Click(object sender, EventArgs e)
+            {
+
+            }
+            #endregion
+
+            #region Consultas
+
+            private void mnuIU_CONSULTA_INVENTARIO_Click(object sender, EventArgs e)
+            {
+
+            }
+
+            private void mnuIU_CONSULTA_VENTAS_Click(object sender, EventArgs e)
+            {
+
+            }
+
+            private void mnuIU_CONSULTA_COMPRAS_Click(object sender, EventArgs e)
+            {
+
+            }
+
+            private void mnuIU_CONSULTA_SOLICITUDES_Click(object sender, EventArgs e)
+            {
+
+            }
+
+            private void mnuIU_CONSULTA_APARTADOS_Click(object sender, EventArgs e)
+            {
+
+            }
+
+            private void mnuIU_CONSULTA_REPARACIONES_Click(object sender, EventArgs e)
+            {
+
+            }
+            #endregion
+
+            #region Ayuda
+            private void mnuAcerca_Click(object sender, EventArgs e)
+            {
+                (new SIPV.Windows.frmAcerca()).Show();
+            }
+
+            private void mnuTemasAyuda_Click(object sender, EventArgs e)
+            {
+                try
+                {
+                    string kdna = System.AppDomain.CurrentDomain.BaseDirectory + "/Ayuda.chm";
+                    Help.ShowHelp(this, kdna);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error de tipo: " + ex.Message);
+                }
+            }
+
+            #endregion
+
+            #region Utilitarios
+            private void mnuCambioClave_Click(object sender, EventArgs e)
+            {
+                MostrarForma(new SIPV.Security.frmCambioClave(vDB));
+            }
+
+            private void gestiónAuditoríaToolStripMenuItem_Click(object sender, EventArgs e)
+            {
+
+            }
+
+
+            #endregion
+
+            private void mnuIU_PROCESO_INVENTARIO_FISICO_Click(object sender, EventArgs e)
+            {
+                MostrarForma(new SIPV.Windows.Procesos.IU_INVENTARIO_FISICO (vDB, this));
+            }
+
+        #region Procesos
+
+
+
+        
+
+        #endregion
+
+        #endregion
 
     }
 }
