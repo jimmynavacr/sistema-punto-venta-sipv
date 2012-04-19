@@ -87,6 +87,10 @@ namespace SIPV.Datos
             this.Compania = "dbo";
             this.CrearEstructura();
             this.InicializarCampos();
+            if (!ComboTIPO_ARTICULO.Cargado)
+            {
+                ComboTIPO_ARTICULO.TIPO_ARTICULO = DB.ArrayDesdeTablaCodigoDescripcion(DB, "TIPO_ARTICULO", "TIPO_ARTICULO", "Descripcion");
+            }
         }
         #endregion
 
@@ -96,6 +100,7 @@ namespace SIPV.Datos
         private string _TIPO_ARTICULO;
         private string _PRECIO;
         private string _GRAVADO;
+        private string _TIPO_ARTICULO_DESCRIPCION;
         #endregion
 
         #region Propiedades Originales
@@ -115,7 +120,9 @@ namespace SIPV.Datos
         public string Tipo_articulo
         {
             get { return _TIPO_ARTICULO; }
-            set { _TIPO_ARTICULO = value; }
+            set { _TIPO_ARTICULO = value;
+            _TIPO_ARTICULO_DESCRIPCION = _TIPO_ARTICULO.Trim() + "-" + DB.Sub_Datar_DT("TIPO_ARTICULO ", "TIPO_ARTICULO ", "DESCRIPCION", _TIPO_ARTICULO);
+            }
         }
         [Browsable(false)]
         public string Precio
@@ -135,7 +142,7 @@ namespace SIPV.Datos
         [Browsable(true)]
         //[TypeConverter(typeof(Combo))] 
         //[Editor(typeof(Consulta), typeof(UITypeEditor))]
-        [CategoryAttribute("General"), DisplayName("0-Articulo"), DescriptionAttribute("Valor de Articulo"), ReadOnly(false)]
+        [CategoryAttribute("General"), DisplayName("0-Artículo"), DescriptionAttribute("Id de artículo"), ReadOnly(false)]
 
         public string _mARTICULO
         {
@@ -145,7 +152,7 @@ namespace SIPV.Datos
         [Browsable(true)]
         //[TypeConverter(typeof(Combo))] 
         //[Editor(typeof(Consulta), typeof(UITypeEditor))]
-        [CategoryAttribute("General"), DisplayName("1-Descripcion"), DescriptionAttribute("Valor de Descripcion"), ReadOnly(false)]
+        [CategoryAttribute("General"), DisplayName("1-Descripción"), DescriptionAttribute("Descripión del artículo"), ReadOnly(false)]
 
         public string _mDESCRIPCION
         {
@@ -153,34 +160,45 @@ namespace SIPV.Datos
             set { Descripcion = value; }
         }
         [Browsable(true)]
-        //[TypeConverter(typeof(Combo))] 
+        [TypeConverter(typeof(ComboTIPO_ARTICULO))] 
         //[Editor(typeof(Consulta), typeof(UITypeEditor))]
-        [CategoryAttribute("General"), DisplayName("2-Tipo_articulo"), DescriptionAttribute("Valor de Tipo_articulo"), ReadOnly(false)]
+        [CategoryAttribute("General"), DisplayName("2-Tipo Artículo"), DescriptionAttribute("Tipo de artículo"), ReadOnly(false)]
 
         public string _mTIPO_ARTICULO
         {
-            get { return Tipo_articulo; }
-            set { Tipo_articulo = value; }
-        }
-        [Browsable(true)]
-        //[TypeConverter(typeof(Combo))] 
-        //[Editor(typeof(Consulta), typeof(UITypeEditor))]
-        [CategoryAttribute("General"), DisplayName("3-Precio"), DescriptionAttribute("Valor de Precio"), ReadOnly(false)]
+            get { return _TIPO_ARTICULO_DESCRIPCION; }
+            set
+            {
 
-        public string _mPRECIO
-        {
-            get { return Precio; }
-            set { Precio = value; }
+                if (value.Length >= 2)
+                {
+                    Tipo_articulo = value.Substring(0, 2);
+                }
+                else
+                {
+                    Tipo_articulo = "00";
+                }
+            }
         }
         [Browsable(true)]
-        //[TypeConverter(typeof(Combo))] 
+        //[TypeConverter(typeof(ComboTIPO_ARTICULO))] 
+        //[Editor(typeof(Consulta), typeof(UITypeEditor))]
+        [CategoryAttribute("General"), DisplayName("3-Precio"), DescriptionAttribute("Precio del artículo"), ReadOnly(false)]
+
+        public double  _mPRECIO
+        {
+            get { return double.Parse (Precio); }
+            set { Precio = value.ToString() ; }
+        }
+        [Browsable(true)]
+        //[TypeConverter(typeof(ComboTIPO_ARTICULO))] 
         //[Editor(typeof(Consulta), typeof(UITypeEditor))]
         [CategoryAttribute("General"), DisplayName("4-Gravado"), DescriptionAttribute("Valor de Gravado"), ReadOnly(false)]
 
-        public string _mGRAVADO
+        public bool  _mGRAVADO
         {
-            get { return Gravado; }
-            set { Gravado = value; }
+            get { return Gravado.Equals("S") ; }
+            set { Gravado = value?"S":"N"; }
         }
         #endregion
 
@@ -188,9 +206,9 @@ namespace SIPV.Datos
         public override string Validar()
         {
 
-            if (this.EsValorInvalido(_ARTICULO)) { return "Falta el dato de articulo"; }
-            if (this.EsValorInvalido(_DESCRIPCION)) { return "Falta el dato de descripcion"; }
-            if (this.EsValorInvalido(_TIPO_ARTICULO)) { return "Falta el dato de tipo_articulo"; }
+            if (this.EsValorInvalido(_ARTICULO)) { return "Falta el dato de artículo"; }
+            if (this.EsValorInvalido(_DESCRIPCION)) { return "Falta el dato de descripción"; }
+            if (this.EsValorInvalido(_TIPO_ARTICULO)) { return "Falta el dato de tipo artículo"; }
             if (this.EsValorInvalido(_PRECIO)) { return "Falta el dato de precio"; }
             if (this.EsValorInvalido(_GRAVADO)) { return "Falta el dato de gravado"; }
             return "";
@@ -199,9 +217,9 @@ namespace SIPV.Datos
         {
             _ARTICULO = "";
             _DESCRIPCION = "";
-            _TIPO_ARTICULO = "";
-            _PRECIO = "";
-            _GRAVADO = "";
+            _TIPO_ARTICULO = "00";
+            _PRECIO = "0";
+            _GRAVADO = "N";
             Lista = null;
         }
     }

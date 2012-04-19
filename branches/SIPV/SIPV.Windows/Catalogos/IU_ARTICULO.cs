@@ -19,7 +19,7 @@ namespace SIPV.Windows.Catalogos
         #region Constructores
 
         public IU_ARTICULO(BaseCode.DB vDB, Form Parent):        
-            base(vDB, Parent, new SIPV.Datos.TIPO_ENTIDAD(vDB))
+            base(vDB, Parent, new SIPV.Datos.ARTICULO(vDB))
         {
             InitializeComponent();
             Campos.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.Campos_PropertyValueChanged);
