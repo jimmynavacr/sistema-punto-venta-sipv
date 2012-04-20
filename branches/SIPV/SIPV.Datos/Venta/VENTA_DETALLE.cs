@@ -72,7 +72,7 @@ namespace SIPV.Datos
         }
     }
 
-
+    [TypeConverter(typeof(ConvertidoVENTA_DETALLE))]
     public class VENTA_DETALLE : BaseCode.DB_BASE, IvDB
     {
         public BaseCode.DB getvDB() { return DB; }
@@ -87,6 +87,17 @@ namespace SIPV.Datos
             this.Compania = "dbo";
             this.CrearEstructura();
             this.InicializarCampos();
+            
+            this.SqlSelectSetCommand.CommandText = "SELECT * FROM VENTA_DETALLE WHERE FACTURA=@FACTURA";
+            this.SqlDeleteSetCommand.CommandText = "DELETE VENTA_DETALLE WHERE FACTURA=@FACTURA";
+            this.LlavesGrupo = new string[] { "ACTIVO_TI" };
+
+        }
+        public VENTA_DETALLE(BaseCode.DB vDB, string Factura)
+            : this(vDB)
+        {
+            this.Factura = Factura;
+
         }
         #endregion
 
@@ -174,39 +185,87 @@ namespace SIPV.Datos
         public string _mARTICULO
         {
             get { return Articulo; }
-            set { Articulo = value; }
+            set { Articulo = value;
+                _ARTICULO = value;
+                _lARTICULO.Articulo = value;
+                _lARTICULO.SeleccionarFila();
+                Gravado = _lARTICULO.Gravado;        
+            }
         }
+        
+        private ARTICULO _lARTICULO;
+        [Browsable(true)]
+        //[TypeConverter(typeof(Combo))] 
+        [TypeConverterAttribute(typeof(ConvertidoARTICULO))]
+        //[Editor(typeof(Consulta), typeof(UITypeEditor))]
+        [CategoryAttribute("General"), DisplayName("2-Detalle del Activo"), DescriptionAttribute("Id del activo"), ReadOnly(true)]
+
+        public ARTICULO _DETALLE_ARTICULO
+        {
+            get { return _lARTICULO; }
+            set { _lARTICULO = value; }
+        }
+
+        [Browsable(false)]
+        public string _DETALLE_ARTICULO_M
+        {
+            get { return ""; }
+
+        }
+
+
+        double Total = 0;
         [Browsable(true)]
         //[TypeConverter(typeof(Combo))] 
         //[Editor(typeof(Consulta), typeof(UITypeEditor))]
         [CategoryAttribute("General"), DisplayName("3-Precio"), DescriptionAttribute("Valor de Precio"), ReadOnly(false)]
 
-        public string _mPRECIO
+        public double  _mPRECIO
         {
-            get { return Precio; }
-            set { Precio = value; }
+            get { 
+                double result=0;
+                try 
+                {
+                    result=double.Parse(Precio);
+                }
+                catch { }
+                return result;
+            }
+            set { Precio = value.ToString(); Total = value * _mPRECIO; }
         }
         [Browsable(true)]
         //[TypeConverter(typeof(Combo))] 
         //[Editor(typeof(Consulta), typeof(UITypeEditor))]
         [CategoryAttribute("General"), DisplayName("4-Gravado"), DescriptionAttribute("Valor de Gravado"), ReadOnly(false)]
 
-        public string _mGRAVADO
+        public bool _mGRAVADO
         {
-            get { return Gravado; }
-            set { Gravado = value; }
+            get { return Gravado.Equals("S"); }
+            set { Gravado = value ? "S" : "N"; }
         }
         [Browsable(true)]
         //[TypeConverter(typeof(Combo))] 
         //[Editor(typeof(Consulta), typeof(UITypeEditor))]
         [CategoryAttribute("General"), DisplayName("5-Cantidad"), DescriptionAttribute("Valor de Cantidad"), ReadOnly(false)]
 
-        public string _mCANTIDAD
+        public int _mCANTIDAD
         {
-            get { return Cantidad; }
-            set { Cantidad = value; }
+            get { return int.Parse (Cantidad); }
+            set { Cantidad = value.ToString(); Total = value * _mPRECIO; }
         }
+
         [Browsable(true)]
+        //[TypeConverter(typeof(Combo))] 
+        //[Editor(typeof(Consulta), typeof(UITypeEditor))]
+        [CategoryAttribute("General"), DisplayName("6-Movimiento"), DescriptionAttribute("Valor de Movimiento"), ReadOnly(true)]
+
+        public double  _mTOTAL
+        {
+            get { return Total; }
+
+        }
+
+        [Browsable(false)]
         //[TypeConverter(typeof(Combo))] 
         //[Editor(typeof(Consulta), typeof(UITypeEditor))]
         [CategoryAttribute("General"), DisplayName("6-Movimiento"), DescriptionAttribute("Valor de Movimiento"), ReadOnly(false)]
@@ -233,13 +292,16 @@ namespace SIPV.Datos
         }
         public override void InicializarCampos()
         {
-            _FACTURA = "";
+            Total = 0;
             _LINEA = "";
             _ARTICULO = "";
-            _PRECIO = "";
+            _PRECIO = "0";
             _GRAVADO = "";
-            _CANTIDAD = "";
-            _MOVIMIENTO = "";
+            _CANTIDAD = "0";
+            _MOVIMIENTO = "0";
+            _lARTICULO = new ARTICULO(this.DB);
+            _lARTICULO.ReadOnly = true;
+            _lARTICULO.LimpiaCampos();
             Lista = null;
         }
     }

@@ -37,6 +37,7 @@ namespace SIPV.Datos
 
     public class ConsultaENTIDAD : UITypeEditor
     {
+        public static string  mTIPO_ENTIDAD="0";
         public override UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext context)
         {
             return UITypeEditorEditStyle.Modal;
@@ -53,13 +54,13 @@ namespace SIPV.Datos
                 if (value == null)
                 {
                     value = "0";
-                }
+                }       
                 vTextCampoLlave.Text = value.ToString();
 
                 FormConsulta = new frmConsulta(((IvDB)context.Instance).getvDB(),
                                                  null,
                                                  "Consulta de entidades",
-                                                 "SELECT ENTIDAD,DESCRIPCION FROM ENTIDAD",
+                                                 "SELECT ENTIDAD,DESCRIPCION FROM ENTIDAD WHERE TIPO_ENTIDAD='" + mTIPO_ENTIDAD + "'",
                                                  vTextCampoLlave, 0, null,
                                                  new string[] { "ID", "DESCRIPCION" },
                                                  new int[] { 100, 300 });
@@ -71,7 +72,48 @@ namespace SIPV.Datos
             return value;
         }
     }
+    public class ConsultaCLIENTE : ConsultaENTIDAD
+    {
+        public override UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext context)
+        {
+            return base.GetEditStyle(context);
+        }
+        public override object EditValue(ITypeDescriptorContext context, IServiceProvider provider, object value)
+        {
 
+            ConsultaENTIDAD.mTIPO_ENTIDAD = "1";
+            return base.EditValue(context, provider, value);
+        }
+    }
+
+    public class ConsultaPROVEEDOR : ConsultaENTIDAD
+    {
+        public override UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext context)
+        {
+            return base.GetEditStyle(context);
+        }
+        public override object EditValue(ITypeDescriptorContext context, IServiceProvider provider, object value)
+        {
+
+            ConsultaENTIDAD.mTIPO_ENTIDAD = "2";
+            return base.EditValue(context, provider, value);
+        }
+    }
+
+    public class ConsultaEMPLEADO : ConsultaENTIDAD
+    {
+        public override UITypeEditorEditStyle GetEditStyle(ITypeDescriptorContext context)
+        {
+            return base.GetEditStyle(context);
+        }
+        public override object EditValue(ITypeDescriptorContext context, IServiceProvider provider, object value)
+        {
+
+            ConsultaENTIDAD.mTIPO_ENTIDAD = "3";
+            return base.EditValue(context, provider, value);
+        }
+    }
+   
 
     public class ENTIDAD : BaseCode.DB_BASE, IvDB
     {

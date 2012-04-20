@@ -72,7 +72,36 @@ namespace SIPV.Datos
         }
     }
 
+    public class ConvertidoARTICULO: ExpandableObjectConverter
+    {
+        public override bool CanConvertFrom(ITypeDescriptorContext context, Type sourceType)
+        {
+            return false;
+        }
+        public override bool CanConvertTo(ITypeDescriptorContext context, Type destinationType)
+        {
+            return true;
+        }
+        public override object ConvertTo(ITypeDescriptorContext context, System.Globalization.CultureInfo culture, Object value, Type destinationType)
+        {
+            if (destinationType == typeof(String) && value is ARTICULO)
+            {
+                ARTICULO cX;
+                if (value != null)
+                {
+                    cX = (ARTICULO)value;
+                    return cX._mARTICULO + "/" + cX.Descripcion;
+                }
+            }
+            return base.ConvertTo(context, culture, value, null);
+        }
+        public override object ConvertFrom(ITypeDescriptorContext context, System.Globalization.CultureInfo culture, Object value)
+        {
+            return base.ConvertFrom(context, culture, value);
+        }
+    }
 
+    [TypeConverter(typeof(ConvertidoARTICULO))]
     public class ARTICULO : BaseCode.DB_BASE, IvDB
     {
         public BaseCode.DB getvDB() { return DB; }
@@ -187,7 +216,16 @@ namespace SIPV.Datos
 
         public double  _mPRECIO
         {
-            get { return double.Parse (Precio); }
+            get {
+                double result = 0;
+                try
+                {
+                    result = double.Parse(Precio);
+                }
+                catch { }
+                return result;
+            
+            }
             set { Precio = value.ToString() ; }
         }
         [Browsable(true)]

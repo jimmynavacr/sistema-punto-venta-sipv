@@ -89,8 +89,8 @@
     <Content Include="WindowsBase.dll" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="BD-SIPV.zip" />
     <None Include="Clase_Datos.cst" />
-    <None Include="SIPV.zip" />
     <None Include="Visores\VisorPDF\tessdata\eng.DangAmbigs" />
     <None Include="Visores\VisorPDF\tessdata\eng.freq-dawg" />
     <None Include="Visores\VisorPDF\tessdata\eng.inttemp" />

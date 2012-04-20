@@ -98,6 +98,7 @@
     <Compile Include="TIPO_MOVIMIENTO.cs" />
     <Compile Include="Venta\VENTA.cs" />
     <Compile Include="Venta\VENTA_DETALLE.cs" />
+    <Compile Include="Venta\VENTA_DETALLE_EDITORES.cs" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
