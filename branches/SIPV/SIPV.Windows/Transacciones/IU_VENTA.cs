@@ -26,6 +26,9 @@ namespace SIPV.Windows.Transacciones
             Campos.PropertyValueChanged += new System.Windows.Forms.PropertyValueChangedEventHandler(this.Campos_PropertyValueChanged);
             TextCampoLlave = TbCodigo;
             Cargar_Forma(Parent);
+            this.VistaDatos = "VisVENTA";
+            this.CampoLlave = "FACTURA";
+            this.CampoDescriptor = "NOMBRE_CLIENTE";
         }
 
         #endregion
@@ -35,7 +38,7 @@ namespace SIPV.Windows.Transacciones
 
         public override void ConfigurarConsulta()
         {
-            this.SqlQueryMant = "SELECT VENTA ,VENDEDOR FROM VENTA";
+            this.SqlQueryMant = "SELECT FACTURA ,FECHA,NOMBRE_VENDEDOR,NOMBRE_CLIENTE FROM VisVENTA";
             this.Enc = new string[] { "ID", "DESCRIPCION" };
             this.Anch = new int[] { 100, 300 };
             this.ConfigurarConsulta(SqlQueryMant, Enc, Anch);
